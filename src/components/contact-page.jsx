@@ -1,40 +1,58 @@
-import { Link } from 'react-router-dom'
+import './contact-page.css'
+import bg from '../assets/contact_background.png' 
+import leftImg from '../assets/add1.png'
+import rightImg from '../assets/add2.png'
+import bottomImg from '../assets/add3.png'
+import stars from '../assets/stars.png'
 
 function ContactPage() {
   return (
-    <main style={{ minHeight: '100vh', display: 'grid', placeItems: 'center', padding: '24px' }}>
-      <section
-        style={{
-          width: 'min(680px, 92vw)',
-          border: '1px solid rgba(198, 183, 255, 0.35)',
-          borderRadius: '16px',
-          padding: '28px',
-          background: 'linear-gradient(120deg, rgba(49, 28, 97, 0.84), rgba(18, 10, 34, 0.9))',
-        }}
-      >
-        <h1 style={{ fontFamily: 'Tusker, sans-serif', letterSpacing: '1px', fontSize: 'clamp(2rem, 4vw, 3.2rem)' }}>
+    <main className="contact-page">
+
+
+      {/* FULL WIDTH BOTTOM ARC */}
+      <img src={bottomImg} alt="" className="contact-top-full" />
+
+      {/* LEFT FLOAT */}
+      <img src={leftImg} alt="" className="contact-bottom-left" />
+
+      {/* RIGHT FLOAT */}
+      <img src={rightImg} alt="" className="contact-bottom-right" />
+      {/* BACKGROUND */}
+      <img src={bg} alt="" className="contact-bg" />
+
+      <div className="contact-title-wrapper">
+        <img src={stars} alt="" className="contact-stars" />
+        <div className="contact-title">
           CONTACT US
-        </h1>
-        <p style={{ marginTop: '10px', fontFamily: 'Kiona, sans-serif', lineHeight: '1.7', color: 'rgba(243, 238, 255, 0.9)' }}>
-          Reach out to STC IIT Roorkee at <a href="mailto:stc@iitr.ac.in">stc@iitr.ac.in</a> for
-          event updates, collaboration queries, and participation details.
-        </p>
-        <Link
-          to="/"
-          style={{
-            display: 'inline-block',
-            marginTop: '16px',
-            textDecoration: 'none',
-            fontFamily: 'Kiona, sans-serif',
-            color: '#fff',
-            border: '1px solid rgba(255, 255, 255, 0.45)',
-            borderRadius: '999px',
-            padding: '8px 14px',
-          }}
-        >
-          Back To Home
-        </Link>
-      </section>
+        </div>
+      </div>
+
+      {/* CENTER PERSON */}
+      <div className="contact-card center">
+        <h2>Aviral Vishwakarma</h2>
+        <p>General Secretary Technical Affairs</p>
+        <span>gensec.technical@iitr.ac.in</span>
+        <span>+91 88821 38116</span>
+      </div>
+
+      {/* LEFT PERSON */}
+      <div className="contact-card left">
+        <h2>Rajarshi Verma</h2>
+        <p>Deputy General Secretary</p>
+        <p>Technical Affairs</p>
+        <span>rajarshi_v@bt.iitr.ac.in</span>
+        <span>+91 9519288965</span>
+      </div>
+
+      {/* RIGHT PERSON */}
+      <div className="contact-card right">
+        <h2>Kaushlandra Singh</h2>
+        <p>Convener, Srishti</p>
+        <span>outreach.stc@iitr.ac.in</span>
+        <span>+91 87647 10030</span>
+      </div>
+
     </main>
   )
 }

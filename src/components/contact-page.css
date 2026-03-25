@@ -1,0 +1,144 @@
+.contact-page {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: black;
+  font-family: 'Kiona', sans-serif;
+  color: white;
+}
+
+/* BACKGROUND */
+.contact-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+.contact-top-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* LEFT IMAGE */
+.contact-bottom-left {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: clamp(60px, 10vw, 140px);
+  z-index: 2;
+}
+
+/* RIGHT IMAGE */
+.contact-bottom-right {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: clamp(60px, 10vw, 140px);
+  z-index: 2;
+}
+
+/* CARDS BASE */
+.contact-card {
+  position: absolute;
+  text-align: center;
+  max-width: 260px;
+}
+
+.contact-card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+}
+
+.contact-card p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.contact-card span {
+  display: block;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* POSITIONS */
+.contact-card.center {
+  top: 32%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.contact-card.left {
+  top: 45%;
+  left: 10%;
+}
+
+.contact-card.right {
+  top: 45%;
+  right: 10%;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .contact-card.left,
+  .contact-card.right {
+    position: static;
+    transform: none;
+    margin-top: 20px;
+  }
+
+  .contact-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+/* TITLE WRAPPER */
+.contact-title-wrapper {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* STARS */
+.contact-stars {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  /* Slight horizontal extension */
+  width: clamp(260px, 60vw, 750px);
+
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  opacity: 0.8;
+
+  animation: float 4s ease-in-out infinite;
+}
+
+/* ANIMATION */
+@keyframes float {
+  0%, 100% {
+    transform: translate(-50%, -52%);
+  }
+  50% {
+    transform: translate(-50%, -48%);
+  }
+}
+
+/* TITLE */
+.contact-title {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-family: 'Tusker', sans-serif;
+  letter-spacing: 4px;
+  text-shadow: 0 0 20px rgba(255,255,255,0.8);
+}
