@@ -1,0 +1,141 @@
+.techgc {
+  width: min(1160px, 92vw);
+  margin: 56px auto 96px;
+  position: relative;
+}
+
+.techgc-header {
+  text-align: center;
+  margin: 0 auto 40px;
+  max-width: 980px;
+}
+
+.techgc-title {
+  font-family: 'Tusker', sans-serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.techgc-tagline {
+  font-family: 'Kiona', sans-serif;
+  font-size: clamp(1rem, 1.8vw, 1.6rem);
+  letter-spacing: 2px;
+  color: #f1f1f1;
+  margin-top: 14px;
+}
+
+.techgc-description {
+  font-family: 'Kiona', sans-serif;
+  margin-top: 14px;
+  color: #bfbfd7;
+  font-size: clamp(0.72rem, 1.2vw, 0.96rem);
+  line-height: 1.6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.techgc-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.techgc-card {
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(20, 16, 40, 0.68);
+cursor: pointer;
+  box-shadow: 0 20px 35px rgba(10, 5, 22, 0.5);
+  
+}
+
+.techgc-card-image-wrap {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  overflow: hidden;
+  background: radial-gradient(circle at 30% 30%, #21104a 5%, #04030b 60%);
+}
+
+
+
+.techgc-card-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.techgc-card-image-placeholder {
+  background: radial-gradient(circle at 35% 35%, #5e37d0 0%, #1b1337 35%, #090611 75%);
+}
+
+.techgc-card-content {
+  padding: 14px 22px 18px;
+  text-align: center;
+  background: linear-gradient(120deg, #2f1768 0%, #6d43de 65%, #e6d8ff 120%);
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+  transition: background-position 420ms ease;
+}
+
+.techgc-card:hover .techgc-card-content,
+.techgc-card:focus-within .techgc-card-content {
+  background-position: 100% 50%;
+}
+
+
+.techgc-card-number {
+  font-family: 'Tusker', sans-serif;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  margin: 10px;
+  color: #fff;
+}
+
+.techgc-card-title {
+  font-family: 'Tusker', sans-serif;
+  font-size: clamp(1.5rem, 2.4vw, 2.3rem);
+  letter-spacing: 1px;
+  line-height: 0.95;
+}
+
+.techgc-card-text {
+  margin-top: 8px;
+  font-family: 'Kiona', sans-serif;
+  font-size: clamp(0.72rem, 1vw, 0.9rem);
+  line-height: 1.4;
+  color: #f0e8ff;
+}
+
+@media (max-width: 960px) {
+  .techgc {
+    width: min(1100px, 94vw);
+  }
+
+  .techgc-grid {
+    gap: 18px;
+  }
+
+  .techgc-card-content {
+    padding: 12px 16px 16px;
+  }
+}
+
+@media (max-width: 700px) {
+  .techgc {
+    margin: 44px auto 72px;
+  }
+
+  .techgc-description {
+    letter-spacing: 0.6px;
+  }
+
+  .techgc-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .techgc-card-image-wrap {
+    aspect-ratio: 7 / 4;
+  }
+}
