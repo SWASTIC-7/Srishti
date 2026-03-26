@@ -1,0 +1,321 @@
+import Navbar from './navbar'
+import Footer from './footer'
+import SplashCursor from './splash_cursor'
+import './ps_specific.css'
+
+// ─── Glob imports (same pattern as ProblemStatement.jsx) ───────────────────
+const gifImageMap = import.meta.glob('../assets/gif*.gif', {
+	eager: true,
+	import: 'default',
+})
+
+function getGif(index) {
+	return gifImageMap[`../assets/gif${index + 1}.gif`] ?? ''
+}
+
+// ─── Static tier data ──────────────────────────────────────────────────────
+// Replace placeholder strings with real content when finalized
+const tierData = [
+	{
+		index: 0,
+		title: 'HIGH PREP',
+		overview:
+			'High Prep PS events are the pinnacle of Tech GC — demanding months of preparation, deep domain expertise, and seamless cross-disciplinary collaboration. Teams must build complete end-to-end systems judged on innovation, technical depth, and real-world impact.',
+		problems: [
+			{
+				id: 'hp-1',
+				name: 'PROBLEM NAME',
+				category: 'Category',
+				description:
+					'High Prep PS events are the pinnacle of Tech GC — demanding months of preparation, deep domain expertise, and seamless cross-disciplinary collaboration.',
+				pdfUrl: '#',
+			},
+			{
+				id: 'hp-2',
+				name: 'PROBLEM NAME',
+				category: 'Category',
+				description:
+					'High Prep PS events are the pinnacle of Tech GC — demanding months of preparation, deep domain expertise, and seamless cross-disciplinary collaboration.',
+				pdfUrl: '#',
+			},
+			{
+				id: 'hp-3',
+				name: 'PROBLEM NAME',
+				category: 'Category',
+				description:
+					'High Prep PS events are the pinnacle of Tech GC — demanding months of preparation, deep domain expertise, and seamless cross-disciplinary collaboration.',
+				pdfUrl: '#',
+			},
+			{
+				id: 'hp-4',
+				name: 'PROBLEM NAME',
+				category: 'Category',
+				description:
+					'High Prep PS events are the pinnacle of Tech GC — demanding months of preparation, deep domain expertise, and seamless cross-disciplinary collaboration.',
+				pdfUrl: '#',
+			},
+		],
+		timeline: [
+			{ date: 'Mar 25', label: 'Registration Opens' },
+			{ date: 'Apr 01', label: 'Problem Statements Released' },
+			{ date: 'Apr 15', label: 'Midpoint Check-In' },
+			{ date: 'May 05', label: 'Final Submission' },
+			{ date: 'May 10', label: 'Results Announced' },
+		],
+		prizes: [
+			{ rank: '1st', points: 600 },
+			{ rank: '2nd', points: 400 },
+			{ rank: '3rd', points: 250 },
+		],
+	},
+	{
+		index: 1,
+		title: 'MID PREP',
+		overview:
+			'Mid Prep events challenge teams with moderately complex problem statements released in mid-April. A 2-week window demands focused effort, strong planning, and crisp technical execution across domains.',
+		problems: [
+			{
+				id: 'mp-1',
+				name: 'PROBLEM NAME',
+				category: 'Category',
+				description:
+					'Mid Prep PS events challenge teams with moderately complex problem statements that require focused effort and sharp technical execution.',
+				pdfUrl: '#',
+			},
+			{
+				id: 'mp-2',
+				name: 'PROBLEM NAME',
+				category: 'Category',
+				description:
+					'Mid Prep PS events challenge teams with moderately complex problem statements that require focused effort and sharp technical execution.',
+				pdfUrl: '#',
+			},
+			{
+				id: 'mp-3',
+				name: 'PROBLEM NAME',
+				category: 'Category',
+				description:
+					'Mid Prep PS events challenge teams with moderately complex problem statements that require focused effort and sharp technical execution.',
+				pdfUrl: '#',
+			},
+			{
+				id: 'mp-4',
+				name: 'PROBLEM NAME',
+				category: 'Category',
+				description:
+					'Mid Prep PS events challenge teams with moderately complex problem statements that require focused effort and sharp technical execution.',
+				pdfUrl: '#',
+			},
+		],
+		timeline: [
+			{ date: 'Apr 10', label: 'Registration Opens' },
+			{ date: 'Apr 15', label: 'Problem Statements Released' },
+			{ date: 'Apr 22', label: 'Midpoint Check-In' },
+			{ date: 'Apr 29', label: 'Final Submission' },
+			{ date: 'May 03', label: 'Results Announced' },
+		],
+		prizes: [
+			{ rank: '1st', points: 500 },
+			{ rank: '2nd', points: 300 },
+			{ rank: '3rd', points: 150 },
+		],
+	},
+	{
+		index: 2,
+		title: 'LOW PREP',
+		overview:
+			'Low Prep events are designed for teams who thrive under tighter timelines. Problem statements drop in early April with a 2.5–3 week window, rewarding agility, creativity, and solid fundamentals.',
+		problems: [
+			{
+				id: 'lp-1',
+				name: 'PROBLEM NAME',
+				category: 'Category',
+				description:
+					'Low Prep PS events are designed for teams who thrive under tighter timelines, rewarding agility, creativity, and solid fundamentals.',
+				pdfUrl: '#',
+			},
+			{
+				id: 'lp-2',
+				name: 'PROBLEM NAME',
+				category: 'Category',
+				description:
+					'Low Prep PS events are designed for teams who thrive under tighter timelines, rewarding agility, creativity, and solid fundamentals.',
+				pdfUrl: '#',
+			},
+			{
+				id: 'lp-3',
+				name: 'PROBLEM NAME',
+				category: 'Category',
+				description:
+					'Low Prep PS events are designed for teams who thrive under tighter timelines, rewarding agility, creativity, and solid fundamentals.',
+				pdfUrl: '#',
+			},
+		],
+		timeline: [
+			{ date: 'Apr 01', label: 'Registration Opens' },
+			{ date: 'Apr 05', label: 'Problem Statements Released' },
+			{ date: 'Apr 19', label: 'Midpoint Check-In' },
+			{ date: 'Apr 26', label: 'Final Submission' },
+			{ date: 'Apr 30', label: 'Results Announced' },
+		],
+		prizes: [
+			{ rank: '1st', points: 400 },
+			{ rank: '2nd', points: 250 },
+			{ rank: '3rd', points: 100 },
+		],
+	},
+	{
+		index: 3,
+		title: 'NO-PREP',
+		overview:
+			'No-Prep is the ultimate test of raw ability — problem statements drop near the end of the competition with only a 3–5 hour window. No prior research, no planning, just skill, speed, and instinct.',
+		problems: [
+			{
+				id: 'np-1',
+				name: 'PROBLEM NAME',
+				category: 'Category',
+				description:
+					'No-Prep PS events drop with only hours on the clock. Teams must rely entirely on raw skill, fast thinking, and instinctive problem-solving.',
+				pdfUrl: '#',
+			},
+			{
+				id: 'np-2',
+				name: 'PROBLEM NAME',
+				category: 'Category',
+				description:
+					'No-Prep PS events drop with only hours on the clock. Teams must rely entirely on raw skill, fast thinking, and instinctive problem-solving.',
+				pdfUrl: '#',
+			},
+		],
+		timeline: [
+			{ date: 'May 08', label: 'Registration Opens' },
+			{ date: 'May 10', label: 'Problem Statements Released' },
+			{ date: 'May 10', label: 'Final Submission (Same Day)' },
+			{ date: 'May 11', label: 'Results Announced' },
+		],
+		prizes: [
+			{ rank: '1st', points: 300 },
+			{ rank: '2nd', points: 200 },
+			{ rank: '3rd', points: 100 },
+		],
+	},
+]
+
+// ─── Sub-components ────────────────────────────────────────────────────────
+
+function ProblemCard({ problem }) {
+	return (
+		<div className="pss-card">
+			<div className="pss-card-body">
+				<div className="pss-card-meta">
+					<span className="pss-card-category">{problem.category}</span>
+				</div>
+				<h3 className="pss-card-name">{problem.name}</h3>
+				<p className="pss-card-desc">{problem.description}</p>
+				<div className="pss-card-actions">
+					<a href={problem.pdfUrl} className="pss-btn pss-btn-outline" target="_blank" rel="noreferrer">
+						View PDF ↗
+					</a>
+					<button type="button" className="pss-btn pss-btn-fill">
+						Register
+					</button>
+				</div>
+			</div>
+		</div>
+	)
+}
+
+function TimelineSection({ items }) {
+	return (
+		<div className="pss-timeline">
+			<h2 className="pss-section-title">TIMELINE</h2>
+			<ul className="pss-timeline-list">
+				{items.map((item, i) => (
+					<li className="pss-timeline-item" key={i}>
+						<span className="pss-timeline-date">{item.date}</span>
+						<span className="pss-timeline-dot" />
+						<span className="pss-timeline-label">{item.label}</span>
+					</li>
+				))}
+			</ul>
+		</div>
+	)
+}
+
+function PrizesSection({ prizes }) {
+	const medals = ['🥇', '🥈', '🥉']
+	return (
+		<div className="pss-prizes">
+			<h2 className="pss-section-title">PRIZES</h2>
+			<ul className="pss-prizes-list">
+				{prizes.map((prize, i) => (
+					<li className="pss-prize-item" key={i}>
+						<span className="pss-prize-medal">{medals[i]}</span>
+						<span className="pss-prize-points">{prize.points} POINTS</span>
+					</li>
+				))}
+			</ul>
+		</div>
+	)
+}
+
+// ─── Main Component ────────────────────────────────────────────────────────
+// Receives `tierIndex` as a prop (0–3) so the parent/router can decide which
+// tier to show. Example usage:
+//   <ProblemStatementSpecific tierIndex={0} />
+
+function ProblemStatementSpecific({ tierIndex = 0 }) {
+	const tier = tierData[tierIndex]
+	const gif = getGif(tier.index)
+
+	return (
+		<>
+			<Navbar />
+
+			<SplashCursor />
+
+			<main className="pss-page">
+
+				{/* ── Hero banner ── */}
+				<section className="pss-hero">
+					{gif ? (
+						<img src={gif} alt={`${tier.title} cover`} className="pss-hero-gif" />
+					) : (
+						<div className="pss-hero-placeholder" />
+					)}
+					<div className="pss-hero-overlay" />
+					<div className="pss-hero-content">
+						<h1 className="pss-hero-title">{tier.title}</h1>
+					</div>
+				</section>
+
+				{/* ── Overview ── */}
+				<section className="pss-overview">
+					<h2 className="pss-section-title">OVERVIEW</h2>
+					<p className="pss-overview-text">{tier.overview}</p>
+				</section>
+
+				{/* ── Problem cards (vertical list) ── */}
+				<section className="pss-problems">
+					<h2 className="pss-section-title">PROBLEM STATEMENTS</h2>
+					<div className="pss-cards-list">
+						{tier.problems.map((problem) => (
+							<ProblemCard key={problem.id} problem={problem} />
+						))}
+					</div>
+				</section>
+
+				{/* ── Timeline + Prizes side by side ── */}
+				<section className="pss-bottom-grid">
+					<TimelineSection items={tier.timeline} />
+					<PrizesSection prizes={tier.prizes} />
+				</section>
+
+			</main>
+
+			<Footer />
+		</>
+	)
+}
+
+export default ProblemStatementSpecific

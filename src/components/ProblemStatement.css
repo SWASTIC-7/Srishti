@@ -1,5 +1,5 @@
 .problem-page {
-	width: min(1220px, 95vw);
+	width: min(1000px, 95vw);
 	margin: 26px auto 88px;
 }
 
@@ -10,7 +10,8 @@
 
 .problem-title {
 	font-family: 'Tusker', sans-serif;
-	font-size: clamp(2.1rem, 5vw, 4rem);
+	font-weight: 300;
+	font-size: clamp(4rem, 8vw, 7.5rem);
 	letter-spacing: 2px;
 	background: linear-gradient(90deg, #f4e8ff 0%, #a57fff 55%, #7541f7 100%);
 	-webkit-background-clip: text;
@@ -26,9 +27,9 @@
 .problem-tier {
 	position: relative;
 	overflow: hidden;
-	border-radius: 18px;
+	border-radius: 0;
 	padding: 0 0 0;
-	border: 1px solid rgba(149, 115, 255, 0.45);
+	border: none;
 	background: linear-gradient(120deg, rgba(14, 10, 28, 0.97) 8%, rgba(33, 15, 77, 0.9) 100%);
 	box-shadow: 0 18px 36px rgba(4, 3, 14, 0.58);
 }
@@ -100,20 +101,19 @@
 }
 
 .problem-tier-cards-strip {
-	margin-top: 14px;
-	background: linear-gradient(105deg, #9677e0 0%, #b494f0 100%);
-	border-radius: 0 0 18px 18px;
-	padding: 20px 14px 22px;
-	display: grid;
-	grid-template-columns: auto 1fr auto;
+	margin-top: 0;
+	background: linear-gradient(90deg, #5a1ef5 0%, #7541f7 30%, #a57fff 65%, #c9a0ff 100%);
+	border-radius: 0;
+	padding: 0;
+	display: flex;
 	align-items: center;
-	gap: 12px;
+	justify-content: center;
 }
 
 .problem-nav-arrow {
 	border: 0;
 	background: transparent;
-	color: #f5ecff;
+	color: #1a0a3a;
 	font-size: 1.45rem;
 	line-height: 1;
 	cursor: pointer;
@@ -122,21 +122,22 @@
 
 .problem-tier-cards {
 	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: 30px;
+	grid-template-columns: repeat(2, 280px);
+	gap: 16px;
 }
 
 .problem-card {
 	border-radius: 18px;
 	background: #04030b;
-	padding: 10px 10px 8px;
+	padding: 12px;
+	width: 280px;
+	height: 280px;
 }
 
 .problem-card-top {
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	/* margin-bottom: 10px; */
 }
 
 .problem-card-track {
@@ -148,14 +149,14 @@
 	padding: 3px 7px;
 }
 
-
 .problem-card-visual {
 	position: relative;
 	border-radius: 12px;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-	height: 168px;
+	display: flex;
+	width: 100%;
+	align-items: flex-end;
+	justify-content: space-between;
+	height: calc(100% - 30px);
 	background: #04030b;
 }
 
@@ -169,11 +170,10 @@
 }
 
 .problem-card-name {
-	/* position: absolute; */
 	right: 14px;
 	top: 16px;
 	font-family: 'Tusker', sans-serif;
-	font-size: clamp(1.6rem, 2.2vw, 2.4rem);
+	font-size: clamp(1.1rem, 1.6vw, 1.8rem);
 	line-height: 0.88;
 	letter-spacing: 0.4px;
 	text-align: right;
@@ -182,11 +182,11 @@
 
 .problem-card-actions {
 	display: flex;
-    flex-direction: column;
+	flex-direction: column;
 	justify-content: flex-end;
 	margin-top: 10px;
-    width: 30%;
-    gap: 20px;  
+	width: 45%;
+	gap: 10px;
 }
 
 .problem-btn {
@@ -222,8 +222,17 @@
 		padding-inline: 10px;
 	}
 
+	.problem-card {
+		width: 240px;
+		height: 240px;
+	}
+
+	.problem-tier-cards {
+		grid-template-columns: repeat(2, 240px);
+	}
+
 	.problem-card-visual {
-		height: 148px;
+		height: calc(100% - 30px);
 	}
 }
 
@@ -237,7 +246,7 @@
 	}
 
 	.problem-tier-cards-strip {
-		grid-template-columns: 1fr;
+		flex-direction: column;
 		padding: 12px 10px 12px;
 		gap: 10px;
 	}
@@ -251,15 +260,16 @@
 		gap: 10px;
 	}
 
+	.problem-card {
+		width: 100%;
+		height: 240px;
+	}
+
 	.problem-tier-illustration {
 		width: 132px;
 		top: -20px;
 		left: 10px;
 		opacity: 0.35;
-	}
-
-	.problem-card-visual {
-		height: 136px;
 	}
 
 	.problem-card-name {

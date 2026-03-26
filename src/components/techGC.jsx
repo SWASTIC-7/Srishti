@@ -1,11 +1,6 @@
 import './techGC.css'
 
-const prepImageMap = import.meta.glob('../assets/prep*.png', {
-	eager: true,
-	import: 'default',
-})
-
-const fallbackCardImageMap = import.meta.glob('../assets/card*.png', {
+const gifImageMap = import.meta.glob('../assets/gif*.gif', {
 	eager: true,
 	import: 'default',
 })
@@ -38,11 +33,7 @@ const cards = [
 ]
 
 function getCardImage(index) {
-	const prepImage = prepImageMap[`../assets/prep${index + 1}.png`]
-	if (prepImage) return prepImage
-
-	const fallbackIndex = Math.min(index + 1, 3)
-	return fallbackCardImageMap[`../assets/card${fallbackIndex}.png`] ?? ''
+	return gifImageMap[`../assets/gif${index + 1}.gif`] ?? ''
 }
 
 function TechGC() {

@@ -1,60 +1,99 @@
-import './contact-page.css'
-import bg from '../assets/contact_background.png' 
-import leftImg from '../assets/add1.png'
-import rightImg from '../assets/add2.png'
-import bottomImg from '../assets/add3.png'
-import stars from '../assets/stars.png'
+import React from 'react';
+import './contact-page.css';
+import mapImg from '../assets/map.png';
+import Navbar from "../components/navbar";  
+import Footer from "../components/footer";
+import SplashCursor from "../components/splash_cursor"; 
 
-function ContactPage() {
+const contactItems = [
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="4" width="20" height="16" rx="2"/>
+        <polyline points="2,4 12,13 22,4"/>
+      </svg>
+    ),
+    label: 'EMAIL ADDRESS',
+    value: 'STC@IITR.AC.IN',
+    href: 'mailto:STC@IITR.AC.IN',
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+      </svg>
+    ),
+    label: 'LINKEDIN',
+    value: 'STC@IITR.AC.IN',
+    href: 'https://linkedin.com',
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+      </svg>
+    ),
+    label: 'INSTAGRAM',
+    value: 'STC@IITR.AC.IN',
+    href: 'https://instagram.com',
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+        <circle cx="12" cy="10" r="3"/>
+      </svg>
+    ),
+    label: 'LOCATION',
+    value: 'STC@IITR.AC.IN',
+    href: '#',
+  },
+];
+
+export default function ContactPage() {
   return (
-    <main className="contact-page">
+    <>
+      <Navbar />
 
+      <SplashCursor />  {/* 👈 ADD THIS LINE */}
 
-      {/* FULL WIDTH BOTTOM ARC */}
-      <img src={bottomImg} alt="" className="contact-top-full" />
+      <div className="contact-page">
+        <div className="contact-hero">
+          <h1 className="contact-title">CONTACT US</h1>
+        </div>
 
-      {/* LEFT FLOAT */}
-      <img src={leftImg} alt="" className="contact-bottom-left" />
+        <div className="contact-card-wrapper">
+          <div className="contact-card">
+            <div className="contact-left">
+              <p className="get-in-touch">GET IN TOUCH</p>
+              <ul className="contact-list">
+                {contactItems.map((item, i) => (
+                  <li key={i} className="contact-item">
+                    <a
+                      href={item.href}
+                      className="contact-link"
+                      target={item.href.startsWith('http') ? '_blank' : undefined}
+                      rel="noreferrer"
+                    >
+                      <span className="contact-icon">{item.icon}</span>
+                      <span className="contact-text">
+                        <span className="contact-label">{item.label}</span>
+                        <span className="contact-value">{item.value}</span>
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-      {/* RIGHT FLOAT */}
-      <img src={rightImg} alt="" className="contact-bottom-right" />
-      {/* BACKGROUND */}
-      <img src={bg} alt="" className="contact-bg" />
-
-      <div className="contact-title-wrapper">
-        <img src={stars} alt="" className="contact-stars" />
-        <div className="contact-title">
-          CONTACT US
+            <div className="contact-map">
+              <img src={mapImg} alt="IIT Roorkee Campus Map" />
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* CENTER PERSON */}
-      <div className="contact-card center">
-        <h2>Aviral Vishwakarma</h2>
-        <p>General Secretary Technical Affairs</p>
-        <span>gensec.technical@iitr.ac.in</span>
-        <span>+91 88821 38116</span>
-      </div>
-
-      {/* LEFT PERSON */}
-      <div className="contact-card left">
-        <h2>Rajarshi Verma</h2>
-        <p>Deputy General Secretary</p>
-        <p>Technical Affairs</p>
-        <span>rajarshi_v@bt.iitr.ac.in</span>
-        <span>+91 9519288965</span>
-      </div>
-
-      {/* RIGHT PERSON */}
-      <div className="contact-card right">
-        <h2>Kaushlandra Singh</h2>
-        <p>Convener, Srishti</p>
-        <span>outreach.stc@iitr.ac.in</span>
-        <span>+91 87647 10030</span>
-      </div>
-
-    </main>
-  )
+      <Footer />
+    </>
+  );
 }
-
-export default ContactPage
