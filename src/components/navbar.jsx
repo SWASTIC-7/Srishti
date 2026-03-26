@@ -66,7 +66,7 @@ function Navbar() {
               <li role="none">
                 <a href="#" className="nav-dropdown-item" role="menuitem" onClick={() => setMoreOpen(false)}>
                   <span className="nav-dropdown-icon">◈</span>
-                  SCHEDULE
+                  TEAM
                 </a>
               </li>
             </ul>

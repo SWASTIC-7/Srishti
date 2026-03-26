@@ -55,7 +55,7 @@ export default function ContactPage() {
     <>
       <Navbar />
 
-      <SplashCursor />  {/* 👈 ADD THIS LINE */}
+      <SplashCursor />
 
       <div className="contact-page">
         <div className="contact-hero">

@@ -1,9 +1,7 @@
-
-
 /* ---------- page wrapper ---------- */
 .contact-page {
   min-height: 100vh;
-  background: transparent;       
+  background: transparent;
   color: #ffffff;
   padding-bottom: 80px;
 }
@@ -15,14 +13,14 @@
 }
 
 .contact-title {
-  font-weight: 400;      /* force lighter rendering */
+  font-weight: 400; /* force lighter rendering */
   transform: scaleY(0.9); /* slightly compress thickness */
   font-family: "Tusker";
   font-size: 7rem;
   letter-spacing: 8px;
 
   background: linear-gradient(90deg, #231B39 0%, #5C34D7 35%, #FDF 85%);
-  
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -37,10 +35,10 @@
 
 /* ---------- card ---------- */
 .contact-card {
-  border: 1px solid transparent; 
-
+  border: 1px solid transparent;
   border-radius: 16px;
   padding: 40px 44px;
+
   display: flex;
   align-items: flex-start;
   gap: 40px;
@@ -49,7 +47,7 @@
     linear-gradient(#000, #000) padding-box,
     linear-gradient(45deg, #ff00cc, #8a2be2, #5c34d7) border-box;
 
-  box-shadow: 
+  box-shadow:
     0 0 40px rgba(92, 52, 215, 0.25),
     0 0 80px rgba(255, 221, 255, 0.15);
 }
@@ -62,7 +60,7 @@
 
 .get-in-touch {
   font-family: 'Kiona', sans-serif;
-  font-size: clamp(0.9rem, 1.4vw, 1.1rem);
+  font-size: clamp(1.7rem, 2.2vw, 1.9rem);
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.9);
@@ -72,8 +70,10 @@
 /* ---------- contact list ---------- */
 .contact-list {
   list-style: none;
+  font-size: 2rem;
   margin: 0;
   padding: 0;
+
   display: flex;
   flex-direction: column;
   gap: 22px;
@@ -87,6 +87,7 @@
   display: flex;
   align-items: center;
   gap: 16px;
+
   text-decoration: none;
   color: inherit;
   transition: opacity 200ms ease;
@@ -101,11 +102,14 @@
   width: 44px;
   height: 44px;
   min-width: 44px;
+
   border-radius: 10px;
   background: linear-gradient(135deg, #6d28d9 0%, #5b21b6 100%);
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   color: #ffffff;
 }
 
@@ -123,7 +127,8 @@
 
 .contact-label {
   font-family: 'Kiona', sans-serif;
-  font-size: 0.72rem;
+  font-size: 1.1rem;
+  opacity: 0.7;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.95);
@@ -132,7 +137,8 @@
 
 .contact-value {
   font-family: 'Kiona', sans-serif;
-  font-size: 0.72rem;
+  font-size: 1.5rem;
+  font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.5);
@@ -142,10 +148,12 @@
 .contact-map {
   flex: 0 0 auto;
   width: clamp(220px, 35%, 320px);
+
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  align-self: stretch;   /* fill card height */
+
+  align-self: stretch; /* fill card height */
   display: flex;
 }
 
