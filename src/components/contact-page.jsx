@@ -1,42 +1,99 @@
-import { Link } from 'react-router-dom'
+import React from 'react';
+import './contact-page.css';
+import mapImg from '../assets/map.png';
+import Navbar from "../components/navbar";  
+import Footer from "../components/footer";
+import SplashCursor from "../components/splash_cursor"; 
 
-function ContactPage() {
+const contactItems = [
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="4" width="20" height="16" rx="2"/>
+        <polyline points="2,4 12,13 22,4"/>
+      </svg>
+    ),
+    label: 'EMAIL ADDRESS',
+    value: 'STC@IITR.AC.IN',
+    href: 'mailto:STC@IITR.AC.IN',
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+      </svg>
+    ),
+    label: 'LINKEDIN',
+    value: 'STC@IITR.AC.IN',
+    href: 'https://linkedin.com',
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+      </svg>
+    ),
+    label: 'INSTAGRAM',
+    value: 'STC@IITR.AC.IN',
+    href: 'https://instagram.com',
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+        <circle cx="12" cy="10" r="3"/>
+      </svg>
+    ),
+    label: 'LOCATION',
+    value: 'STC@IITR.AC.IN',
+    href: '#',
+  },
+];
+
+export default function ContactPage() {
   return (
-    <main style={{ minHeight: '100vh', display: 'grid', placeItems: 'center', padding: '24px' }}>
-      <section
-        style={{
-          width: 'min(680px, 92vw)',
-          border: '1px solid rgba(198, 183, 255, 0.35)',
-          borderRadius: '16px',
-          padding: '28px',
-          background: 'linear-gradient(120deg, rgba(49, 28, 97, 0.84), rgba(18, 10, 34, 0.9))',
-        }}
-      >
-        <h1 style={{ fontFamily: 'Tusker, sans-serif', letterSpacing: '1px', fontSize: 'clamp(2rem, 4vw, 3.2rem)' }}>
-          CONTACT US
-        </h1>
-        <p style={{ marginTop: '10px', fontFamily: 'Kiona, sans-serif', lineHeight: '1.7', color: 'rgba(243, 238, 255, 0.9)' }}>
-          Reach out to STC IIT Roorkee at <a href="mailto:stc@iitr.ac.in">stc@iitr.ac.in</a> for
-          event updates, collaboration queries, and participation details.
-        </p>
-        <Link
-          to="/"
-          style={{
-            display: 'inline-block',
-            marginTop: '16px',
-            textDecoration: 'none',
-            fontFamily: 'Kiona, sans-serif',
-            color: '#fff',
-            border: '1px solid rgba(255, 255, 255, 0.45)',
-            borderRadius: '999px',
-            padding: '8px 14px',
-          }}
-        >
-          Back To Home
-        </Link>
-      </section>
-    </main>
-  )
-}
+    <>
+      <Navbar />
 
-export default ContactPage
+      <SplashCursor />
+
+      <div className="contact-page">
+        <div className="contact-hero">
+          <h1 className="contact-title">CONTACT US</h1>
+        </div>
+
+        <div className="contact-card-wrapper">
+          <div className="contact-card">
+            <div className="contact-left">
+              <p className="get-in-touch">GET IN TOUCH</p>
+              <ul className="contact-list">
+                {contactItems.map((item, i) => (
+                  <li key={i} className="contact-item">
+                    <a
+                      href={item.href}
+                      className="contact-link"
+                      target={item.href.startsWith('http') ? '_blank' : undefined}
+                      rel="noreferrer"
+                    >
+                      <span className="contact-icon">{item.icon}</span>
+                      <span className="contact-text">
+                        <span className="contact-label">{item.label}</span>
+                        <span className="contact-value">{item.value}</span>
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="contact-map">
+              <img src={mapImg} alt="IIT Roorkee Campus Map" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <Footer />
+    </>
+  );
+}

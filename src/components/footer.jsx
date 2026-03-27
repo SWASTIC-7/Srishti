@@ -39,7 +39,16 @@ function Footer() {
 						<li><a href="#tech-gc" onClick={(event) => handleScrollTo(event, 'tech-gc')}>EVENTS</a></li>
 						<li><a href="#about-stc" onClick={(event) => handleScrollTo(event, 'about-stc')}>ABOUT US</a></li>
 						<li><a href="#faqs" onClick={(event) => handleScrollTo(event, 'faqs')}>FAQS</a></li>
-						<li><Link to="/contact">CONTACT US</Link></li>
+						<li>
+							<Link
+								to="/contact"
+								onClick={() => {
+									setTimeout(() => window.scrollTo(0, 0), 0)
+								}}
+							>
+								CONTACT US
+							</Link>
+						</li>
 					</ul>
 				</div>
 
@@ -48,16 +57,15 @@ function Footer() {
 					<ul className="footer-contact">
 						<li><a href="mailto:stc@iitr.ac.in">STC@IITR.AC.IN</a></li>
 					</ul>
+					<div className="footer-socials" aria-label="Social links">
+						<a className="footer-social" href="#" aria-label="Instagram" onClick={(event) => event.preventDefault()}>
+							<FaInstagram />
+						</a>
+						<a className="footer-social" href="#" aria-label="LinkedIn" onClick={(event) => event.preventDefault()}>
+							<FaLinkedinIn />
+						</a>
+					</div>
 				</div>
-			</div>
-
-			<div className="footer-socials" aria-label="Social links">
-				<a className="footer-social" href="#" aria-label="Instagram" onClick={(event) => event.preventDefault()}>
-					<FaInstagram />
-				</a>
-				<a className="footer-social" href="#" aria-label="LinkedIn" onClick={(event) => event.preventDefault()}>
-					<FaLinkedinIn />
-				</a>
 			</div>
 		</footer>
 	)

@@ -1,0 +1,183 @@
+/* ---------- page wrapper ---------- */
+.contact-page {
+  min-height: 100vh;
+  background: transparent;
+  color: #ffffff;
+  padding-bottom: 80px;
+}
+
+/* ---------- hero / title ---------- */
+.contact-hero {
+  padding: 64px 0 48px;
+  text-align: center;
+}
+
+.contact-title {
+  font-weight: 400; /* force lighter rendering */
+  transform: scaleY(0.9); /* slightly compress thickness */
+  font-family: "Tusker";
+  font-size: 7rem;
+  letter-spacing: 8px;
+
+  background: linear-gradient(90deg, #231B39 0%, #5C34D7 35%, #FDF 85%);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---------- card wrapper (centres & constrains) ---------- */
+.contact-card-wrapper {
+  width: 90%;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* ---------- card ---------- */
+.contact-card {
+  border: 1px solid transparent;
+  border-radius: 16px;
+  padding: 40px 44px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+
+  background:
+    linear-gradient(#000, #000) padding-box,
+    linear-gradient(45deg, #ff00cc, #8a2be2, #5c34d7) border-box;
+
+  box-shadow:
+    0 0 40px rgba(92, 52, 215, 0.25),
+    0 0 80px rgba(255, 221, 255, 0.15);
+}
+
+/* ---------- left column ---------- */
+.contact-left {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.get-in-touch {
+  font-family: 'Kiona', sans-serif;
+  font-size: clamp(1.7rem, 2.2vw, 1.9rem);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 28px;
+}
+
+/* ---------- contact list ---------- */
+.contact-list {
+  list-style: none;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.contact-item {
+  display: flex;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 200ms ease;
+}
+
+.contact-link:hover {
+  opacity: 0.75;
+}
+
+/* icon bubble */
+.contact-icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+
+  border-radius: 10px;
+  background: linear-gradient(135deg, #6d28d9 0%, #5b21b6 100%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+}
+
+.contact-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* text beside icon */
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contact-label {
+  font-family: 'Kiona', sans-serif;
+  font-size: 1.1rem;
+  opacity: 0.7;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 600;
+}
+
+.contact-value {
+  font-family: 'Kiona', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ---------- map ---------- */
+.contact-map {
+  flex: 0 0 auto;
+  width: clamp(220px, 35%, 320px);
+
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  align-self: stretch; /* fill card height */
+  display: flex;
+}
+
+.contact-map img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 700px) {
+  .contact-card {
+    flex-direction: column;
+    padding: 28px 24px;
+    gap: 28px;
+  }
+
+  .contact-map {
+    width: 100%;
+    height: 200px;
+  }
+
+  .contact-hero {
+    padding: 44px 0 32px;
+  }
+}
