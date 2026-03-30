@@ -422,6 +422,11 @@
 		grid-template-columns: 1fr;
 		gap: 40px;
 	}
+	.pss-card-desc {
+    font-size: clamp(0.60rem, 1.8vw, 1.2rem); /* smaller + more responsive */
+    line-height: 1.4; /* tighter spacing */
+    -webkit-line-clamp: 3; /* optional: allow 3 lines on mobile */
+  }
 }
 
 @media (max-width: 600px) {
@@ -450,4 +455,12 @@
 	.pss-card-meta {
 		justify-content: flex-start;
 	}
+	/* Mobile devices */
+
+  .pss-card-desc {
+    font-size: clamp(0.60rem, 1vw, 1.2rem); /* smaller + more responsive */
+    line-height: 1.4; /* tighter spacing */
+    -webkit-line-clamp: 3; /* optional: allow 3 lines on mobile */
+  }
+
 }

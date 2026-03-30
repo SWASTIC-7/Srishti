@@ -60,7 +60,11 @@ function TechGC() {
 						<article
 							className="techgc-card"
 							key={card.number}
-							onClick={() => navigate(`/problems/${index}`)}
+							
+							onClick={() => {
+									navigate(`/problems/${index}`)
+									window.scrollTo(0, 0)
+								}}
 							style={{ cursor: 'pointer' }}
 						>
 							<div className="techgc-card-image-wrap">
