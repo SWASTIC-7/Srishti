@@ -24,8 +24,8 @@ const contactItems = [
       </svg>
     ),
     label: 'LINKEDIN',
-    value: 'STC@IITR.AC.IN',
-    href: 'https://linkedin.com',
+    value: 'STC',
+    href: 'https://www.linkedin.com/in/avivishwa/',
   },
   {
     icon: (
@@ -34,8 +34,8 @@ const contactItems = [
       </svg>
     ),
     label: 'INSTAGRAM',
-    value: 'STC@IITR.AC.IN',
-    href: 'https://instagram.com',
+    value: 'stc.iitr',
+    href: 'https://www.instagram.com/stc.iitr/',
   },
   {
     icon: (
@@ -45,8 +45,8 @@ const contactItems = [
       </svg>
     ),
     label: 'LOCATION',
-    value: 'STC@IITR.AC.IN',
-    href: '#',
+    value: 'SAC,IIT ROORKEE CAMPUS',
+    href: 'https://www.google.com/maps/search/iit+roorkee/@29.8669143,77.8956437,16z?entry=ttu&g_ep=EgoyMDI2MDMyNC4wIKXMDSoASAFQAw%3D%3D',
   },
 ];
 

@@ -58,10 +58,10 @@ function Footer() {
 						<li><a href="mailto:stc@iitr.ac.in">STC@IITR.AC.IN</a></li>
 					</ul>
 					<div className="footer-socials" aria-label="Social links">
-						<a className="footer-social" href="#" aria-label="Instagram" onClick={(event) => event.preventDefault()}>
+						<a className="footer-social" href="https://www.instagram.com/stc.iitr/" aria-label="Instagram" >
 							<FaInstagram />
 						</a>
-						<a className="footer-social" href="#" aria-label="LinkedIn" onClick={(event) => event.preventDefault()}>
+						<a className="footer-social" href="https://www.linkedin.com/in/avivishwa/" aria-label="LinkedIn" >
 							<FaLinkedinIn />
 						</a>
 					</div>

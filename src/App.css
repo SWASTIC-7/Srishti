@@ -55,7 +55,7 @@
   cursor: pointer;
   border-radius: 64px;
   transition: all 0.3s;
- background: var(--main-gradient, linear-gradient(107deg, #231B39 7.8%, #5C34D7 48.37%, #FDF 108.45%));
+  background: var(--main-gradient, linear-gradient(107deg, #231B39 7.8%, #5C34D7 48.37%, #FDF 108.45%));
 }
 
 .nav-cta:hover {
@@ -67,12 +67,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 60vh;
   text-align: center;
-  padding: 0 18px;
+  padding: 80px 18px 0;  
   transform: translateY(-20px);
 }
+
 .hero-title-wrapper {
   position: relative;
   display: flex;
@@ -92,6 +93,7 @@
 .Cube-right {
   transform: rotate(90deg);
 }
+
 .hero-subtitle {
   font-family: "Tusker";
   font-size: 2rem;
@@ -145,14 +147,12 @@
 }
 
 .btn-primary {
-background: linear-gradient(107deg, #231B39 7.8%, #5C34D7 48.37%, #FDF 108.45%);
+  background: linear-gradient(107deg, #231B39 7.8%, #5C34D7 48.37%, #FDF 108.45%);
   color: #fff;
- 
 }
 
 .btn-primary:hover {
   background: linear-gradient(-107deg, #231B39 7.8%, #5C34D7 48.37%, #FDF 108.45%);
-
 }
 
 .btn-outline {
@@ -175,6 +175,12 @@ background: linear-gradient(107deg, #231B39 7.8%, #5C34D7 48.37%, #FDF 108.45%);
   overflow: hidden;
 }
 
+.globe-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
 .globe-fade-bottom {
   position: absolute;
   bottom: 0;
@@ -185,6 +191,7 @@ background: linear-gradient(107deg, #231B39 7.8%, #5C34D7 48.37%, #FDF 108.45%);
   pointer-events: none;
 }
 
+/* ── 1200px ── */
 @media (max-width: 1200px) {
   .navbar {
     padding: 16px 24px;
@@ -207,8 +214,17 @@ background: linear-gradient(107deg, #231B39 7.8%, #5C34D7 48.37%, #FDF 108.45%);
   .hero-subtitle {
     font-size: clamp(1.25rem, 2.5vw, 1.8rem);
   }
-}
 
+  .nav-more-btn {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .nav-dropdown-item {
+    font-size: 0.92rem;
+  }
+}
+/* ── 900px ── */
 @media (max-width: 900px) {
   .navbar {
     flex-wrap: wrap;
@@ -231,10 +247,21 @@ background: linear-gradient(107deg, #231B39 7.8%, #5C34D7 48.37%, #FDF 108.45%);
     font-size: 0.92rem;
   }
 
+  .nav-more-btn {
+    font-size: 0.92rem;
+    letter-spacing: 1px;
+  }
+
+  .nav-dropdown-item {
+    font-size: 0.92rem;
+    letter-spacing: 1px;
+  }
+
   .nav-cta {
     order: 2;
     padding: 8px 16px;
-    font-size: 0.95rem;
+    font-size: 0.92rem;
+    letter-spacing: 1px;
   }
 
   .hero {
@@ -274,17 +301,38 @@ background: linear-gradient(107deg, #231B39 7.8%, #5C34D7 48.37%, #FDF 108.45%);
     letter-spacing: 1px;
     padding: 10px 18px;
   }
+
+  .nav-dropdown {
+    left: auto;
+    right: 0;
+    transform: none;
+  }
+
+  .nav-dropdown::before {
+    left: auto;
+    right: 18px;
+    transform: rotate(45deg);
+  }
 }
 
+/* ── 560px ── */
 @media (max-width: 560px) {
   .navbar {
     position: static;
     background: rgba(54, 27, 102, 0.35);
   }
 
+  .nav-links a,
+  .nav-more-btn,
+  .nav-dropdown-item,
+  .nav-cta {
+    font-size: 0.82rem;
+    letter-spacing: 0.8px;
+  }
+
   .hero {
     min-height: 52vh;
-    padding: 0 14px;
+    padding: 35px 14px 0;
   }
 
   .hero-title {
@@ -312,11 +360,11 @@ background: linear-gradient(107deg, #231B39 7.8%, #5C34D7 48.37%, #FDF 108.45%);
   }
 
   .globe-container {
-    height: 72vh;
+    height: auto;
+    aspect-ratio: 1 / 1;
     margin-top: -6vh;
   }
 }
-
 
 /* ── MORE dropdown trigger ── */
 .nav-more {
@@ -369,7 +417,6 @@ background: linear-gradient(107deg, #231B39 7.8%, #5C34D7 48.37%, #FDF 108.45%);
   backdrop-filter: blur(14px);
   box-shadow: 0 16px 40px rgba(4, 2, 14, 0.7);
   z-index: 200;
-
   animation: dropdownIn 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
@@ -427,45 +474,4 @@ background: linear-gradient(107deg, #231B39 7.8%, #5C34D7 48.37%, #FDF 108.45%);
 
 .nav-dropdown-item:hover .nav-dropdown-icon {
   color: rgba(165, 127, 255, 0.9);
-}
-
-/* ── responsive ── */
-@media (max-width: 1200px) {
-  .nav-more-btn {
-    font-size: 1rem;
-    letter-spacing: 1px;
-  }
-
-  .nav-dropdown-item {
-    font-size: 0.92rem;
-  }
-}
-
-@media (max-width: 900px) {
-  .nav-more-btn {
-    font-size: 0.92rem;
-  }
-
-  .nav-dropdown {
-    left: auto;
-    right: 0;
-    transform: none;
-  }
-
-  .nav-dropdown::before {
-    left: auto;
-    right: 18px;
-    transform: rotate(45deg);
-  }
-
-  @keyframes dropdownIn {
-    from {
-      opacity: 0;
-      transform: translateY(-6px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
 }

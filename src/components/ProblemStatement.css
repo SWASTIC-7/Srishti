@@ -11,7 +11,7 @@
 .problem-title {
 	font-family: 'Tusker', sans-serif;
 	font-weight: 300;
-	font-size: clamp(4rem, 8vw, 7.5rem);
+	font-size: clamp(2.2rem, 8vw, 7.5rem);
 	letter-spacing: 2px;
 	background: linear-gradient(90deg, #f4e8ff 0%, #a57fff 55%, #7541f7 100%);
 	-webkit-background-clip: text;
@@ -99,7 +99,6 @@
 	color: rgba(233, 226, 255, 0.86);
 	max-width: 78ch;
 }
-
 .problem-tier-cards-strip {
 	margin-top: 0;
 	background: linear-gradient(90deg, #5a1ef5 0%, #7541f7 30%, #a57fff 65%, #c9a0ff 100%);
@@ -249,12 +248,12 @@
 		height: 150px;
 	}
 
+	
 	.problem-tier-cards-strip {
 		flex-direction: column;
 		padding: 12px 10px 12px;
 		gap: 10px;
 	}
-
 	.problem-nav-arrow {
 		display: none;
 	}
@@ -279,4 +278,5 @@
 	.problem-card-name {
 		font-size: 1.95rem;
 	}
+
 }

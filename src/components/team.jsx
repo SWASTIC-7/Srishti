@@ -4,12 +4,18 @@ import SplashCursor from './splash_cursor'
 import './team.css'
 
 // ─── Photo imports ─────────────────────────────────────────────────────────
-import swasticImg from '../assets/swastic.jpeg'
-import vidhanImg from '../assets/vidhan.jpeg'
-import arnavImg from '../assets/arnav.jpeg'
-import deepakImg from '../assets/deepak.jpeg'
-import divyanshuImg from '../assets/divyanshu.jpeg'
-import shivnaImg from '../assets/shivna.jpeg'
+import swasticImg from '../assets/swastic.jpg'
+import vidhanImg from '../assets/vidhan.jpg'
+import arnavImg from '../assets/arnav.jpg'
+import deepakImg from '../assets/deepak.jpg'
+import divyanshuImg from '../assets/divyanshu.jpg'
+import shivnaImg from '../assets/shivna.jpg'
+import aniketImg from '../assets/aniket.jpg';
+import anshImg from '../assets/ansh.jpg';
+import aviralImg from '../assets/aviral.jpg';
+import rajarshiImg from '../assets/rajarshi.jpg';
+import kaushalendraImg from '../assets/kaushalendra.jpg';
+
 
 // ─── Team data ─────────────────────────────────────────────────────────────
 const teamMembers = [
@@ -33,13 +39,13 @@ const teamMembers = [
 	},
 	{
 		id: 'tm-4',
-		name: 'Deepak Bhagat',
+		name: 'Deepak Meemroth',
 		phone: '+91 78782 47894',
 		photo: deepakImg,
 	},
 	{
 		id: 'tm-5',
-		name: 'Divyanshu Barot',
+		name: 'Devanshu',
 		phone: '+91 83200 23086',
 		photo: divyanshuImg,
 	},
@@ -48,6 +54,38 @@ const teamMembers = [
 		name: 'Swastic Keshari',
 		phone: '+91 9125525580',
 		photo: swasticImg,
+	},
+	{
+		id: 'tm-7',
+		name:'Aniket',
+		phone: '+91 93480 69586',
+		photo: aniketImg,
+	},
+
+	{
+		id: 'tm-8',
+		name:'Ansh Bhardwaj',
+		phone: '+91 82877 67318',
+		photo: anshImg,
+	},
+	{
+		id: 'tm-9',
+		name:'Aviral Vishwakarma',
+		phone:' +91 88821 38116',
+		photo: aviralImg,
+	},
+
+	{
+		id: 'tm-10',
+		name: 'Rajarshi Verma',
+		phone: '+91 9519288965',
+		photo: rajarshiImg,
+	},
+	{
+		id: 'tm-11',
+		name: ' Kaushalendra Singh',
+		phone: '+91 87647 10030',
+		photo: kaushalendraImg,
 	},
 ]
 

@@ -15,9 +15,10 @@ const leaderboardByTrack = {
 		{ score: 2000, club: 'JAWAHAR BHAWAN', rank: 4 },
 		{ score: 2000, club: 'JAWAHAR BHAWAN', rank: 4 },
 	],
-	Software: [],
-	Hardware: [],
-	Robotics: [],
+	HighPrep: [],
+	MidPrep: [],
+	LowPrep: [],
+	NoPrep: [],
 }
 
 function rankLabel(rank) {
@@ -53,7 +54,7 @@ function Leaderbord() {
 						</select>
 					</div>
 
-					{hasData ? (
+					{/*hasData ? (
 						<div className="leaderboard-list" role="list" aria-label="Leaderboard results">
 							{rows.map((row, index) => {
 								const label = rankLabel(row.rank)
@@ -78,7 +79,7 @@ function Leaderbord() {
 								)
 							})}
 						</div>
-					) : (
+					) : */(
 						<div className="leaderboard-empty">RESULT TO BE ANNOUNCED !!</div>
 					)}
 				</div>
