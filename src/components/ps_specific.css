@@ -126,20 +126,28 @@
 
 /* ── Guy image on the left ── */
 .pss-card-guy {
-	width: 160px;
-	min-width: 160px;
-	align-self: stretch;
-	height: 100%;
-	object-fit: cover;
-	object-position: center top;
-	flex-shrink: 0;
-	position: relative;
-	z-index: 2;
-	margin-right: 0;
-	filter: brightness(1.15);
-	display: block;
+    width: 160px;
+    min-width: 160px;
+    align-self: stretch;  
+    height: 100%;         
+    min-height: 100%;       
+    object-fit: cover;
+    object-position: center top;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+    margin-right: 0;
+    filter: brightness(1.15);
+    display: block;
 }
-
+.pss-card-wrapper {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    background: #000000;  
+    overflow: hidden;     
+    border-radius: 0 14px 14px 0;
+}
 /* ── Single problem card ── */
 .pss-card {
 	flex: 1;
