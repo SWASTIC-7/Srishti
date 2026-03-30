@@ -64,10 +64,15 @@ function Navbar() {
                 </Link>
               </li>
               <li role="none">
-                <a href="#" className="nav-dropdown-item" role="menuitem" onClick={() => setMoreOpen(false)}>
+                <Link
+                  to="/team"
+                  className="nav-dropdown-item"
+                  role="menuitem"
+                  onClick={() => { setMoreOpen(false); setTimeout(() => window.scrollTo(0, 0), 0); }}
+                >
                   <span className="nav-dropdown-icon">◈</span>
                   TEAM
-                </a>
+                </Link>
               </li>
             </ul>
           )}
