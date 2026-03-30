@@ -140,12 +140,15 @@
 	justify-content: flex-start;
 }
 
+/* ── Category tag: transparent bg, white border & text ── */
 .problem-card-track {
 	font-family: 'Kiona', sans-serif;
 	font-size: 0.62rem;
 	letter-spacing: 0.06em;
-	color: #eee6ff;
-	border-radius: 10px;
+	color: #ffffff;
+	background: transparent;
+	border: 1px solid #ffffff;
+	border-radius: 6px;
 	padding: 3px 7px;
 }
 
@@ -189,8 +192,9 @@
 	gap: 10px;
 }
 
+/* ── Button: slightly curved, not pill-shaped ── */
 .problem-btn {
-	border-radius: 999px;
+	border-radius: 6px;
 	background: transparent;
 	color: #f5f0ff;
 	font-family: 'Kiona', sans-serif;
