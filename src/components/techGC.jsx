@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import './techGC.css'
 
 const gifImageMap = import.meta.glob('../assets/gif*.gif', {
@@ -37,6 +38,8 @@ function getCardImage(index) {
 }
 
 function TechGC() {
+	const navigate = useNavigate()
+
 	return (
 		<section className="techgc" id="tech-gc">
 			<div className="techgc-header">
@@ -54,7 +57,12 @@ function TechGC() {
 					const imageSrc = getCardImage(index)
 
 					return (
-						<article className="techgc-card" key={card.number}>
+						<article
+							className="techgc-card"
+							key={card.number}
+							onClick={() => navigate(`/problems/${index}`)}
+							style={{ cursor: 'pointer' }}
+						>
 							<div className="techgc-card-image-wrap">
 								{imageSrc ? (
 									<img src={imageSrc} alt={card.title} className="techgc-card-image" />

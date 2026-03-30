@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import './STC.css'
 
 const stcImageMap = import.meta.glob('../assets/stc*.png', {
@@ -22,42 +23,50 @@ function getCardImage(index) {
 
 function STC() {
 	const flareImage = flareImageMap['../assets/flare.png'] ?? ''
+	const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
+
+	useEffect(() => {
+		function handleResize() {
+			setIsMobile(window.innerWidth <= 768)
+		}
+		window.addEventListener('resize', handleResize)
+		return () => window.removeEventListener('resize', handleResize)
+	}, [])
 
 	return (
 		<section className="stc" id="about-stc">
-			{flareImage ? (
+			{!isMobile && flareImage ? (
 				<>
 					<img src={flareImage} alt="" aria-hidden="true" className="stc-flare stc-flare-left" />
 					<img src={flareImage} alt="" aria-hidden="true" className="stc-flare stc-flare-right" />
 				</>
 			) : null}
-            <div className="stc-background" aria-hidden="true">
-			<div className="stc-header">
-				<h2 className="stc-title">ABOUT STC</h2>
-				<p className="stc-description">
-					The Student Technical Council (STC) at IIT Roorkee oversees all technical clubs,
-					fostering innovation through events like Srishti and the General Championship -
-					Tech. It connects students with industry, organizes workshops, and promotes
-					hands-on learning, driving the institute&apos;s technical ecosystem forward.
-				</p>
-			</div>
+			<div className="stc-background" aria-hidden="true">
+				<div className="stc-header">
+					<h2 className="stc-title">ABOUT STC</h2>
+					<p className="stc-description">
+						The Student Technical Council (STC) at IIT Roorkee oversees all technical clubs,
+						fostering innovation through events like Srishti and the General Championship -
+						Tech. It connects students with industry, organizes workshops, and promotes
+						hands-on learning, driving the institute&apos;s technical ecosystem forward.
+					</p>
+				</div>
 
-			<div className="stc-grid">
-				{cards.map((card, index) => {
-					const imageSrc = getCardImage(index)
-
-					return (
-						<article key={card.key} className="stc-card">
-							{imageSrc ? (
-								<img src={imageSrc} alt={card.alt} className="stc-card-image" />
-							) : (
-								<div className="stc-card-image stc-card-image-placeholder" />
-							)}
-						</article>
-					)
-				})}
+				<div className="stc-grid">
+					{cards.map((card, index) => {
+						const imageSrc = getCardImage(index)
+						return (
+							<article key={card.key} className="stc-card">
+								{imageSrc ? (
+									<img src={imageSrc} alt={card.alt} className="stc-card-image" />
+								) : (
+									<div className="stc-card-image stc-card-image-placeholder" />
+								)}
+							</article>
+						)
+					})}
+				</div>
 			</div>
-            </div>
 		</section>
 	)
 }

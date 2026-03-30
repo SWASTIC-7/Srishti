@@ -26,6 +26,15 @@
   background-clip: text;
 }
 
+
+@media (max-width: 768px) {
+    .contact-title {
+        font-size: 2.8rem;
+        letter-spacing: 4px;
+    }
+}
+
+
 /* ---------- card wrapper (centres & constrains) ---------- */
 .contact-card-wrapper {
   width: 90%;

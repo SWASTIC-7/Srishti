@@ -34,6 +34,8 @@
 /* ── each slide is exactly 50% of viewport = 2 visible at once ── */
 .hc-slide {
 	min-width: 50%;
+	width: 50%;
+	flex-shrink: 0;
 	padding: 8px 10px 16px;
 	box-sizing: border-box;
 }
@@ -216,14 +218,16 @@
 }
 
 /* ── responsive ── */
-@media (max-width: 700px) {
+@media (max-width: 768px) {
 	.hc-root {
 		padding: 20px 10px 16px;
 		gap: 8px;
 	}
 
 	.hc-slide {
-		min-width: 85%;
+		min-width: 100%;
+		width: 100%;
+		flex-shrink: 0;
 		padding: 6px 6px 14px;
 	}
 
@@ -238,5 +242,15 @@
 
 	.hc-name {
 		font-size: clamp(1rem, 4vw, 1.4rem);
+	}
+	
+	.hc-category {
+		font-size: 0.58rem;
+		padding: 4px 9px;
+	}
+
+	.hc-btn {
+		font-size: 0.58rem;
+		padding: 7px 14px;
 	}
 }

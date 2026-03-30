@@ -1,10 +1,25 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, useLayoutEffect } from 'react'
 import './CardCarousel.css'
 
 function CardCarousel({ cards }) {
 	const total = cards.length
 	const cloned = [...cards, ...cards, ...cards]
-	const CARD_WIDTH_PERCENT = 50
+
+	const [cardWidth, setCardWidth] = useState(50)
+	const viewportRef = useRef(null)
+
+	useLayoutEffect(() => {
+		function measure() {
+			const viewport = viewportRef.current
+			if (!viewport) return
+			const slide = viewport.querySelector('.hc-slide')
+			if (!viewport.offsetWidth || !slide) return
+			setCardWidth((slide.offsetWidth / viewport.offsetWidth) * 100)
+		}
+		measure()
+		window.addEventListener('resize', measure)
+		return () => window.removeEventListener('resize', measure)
+	}, [])
 
 	const [offset, setOffset] = useState(total)
 	const [transitioning, setTransitioning] = useState(true)
@@ -13,11 +28,6 @@ function CardCarousel({ cards }) {
 	const dragDelta = useRef(0)
 	const [dragOffset, setDragOffset] = useState(0)
 	const [dragging, setDragging] = useState(false)
-	const trackRef = useRef(null)
-
-	function wrap(i) {
-		return ((i % total) + total) % total
-	}
 
 	function handleTransitionEnd() {
 		isAnimating.current = false
@@ -70,8 +80,8 @@ function CardCarousel({ cards }) {
 	}
 
 	const translateX =
-		-(offset * CARD_WIDTH_PERCENT) +
-		(dragging ? (dragOffset / (trackRef.current?.offsetWidth || 1)) * 100 : 0)
+		-(offset * cardWidth) +
+		(dragging ? (dragOffset / (viewportRef.current?.offsetWidth || 1)) * 100 : 0)
 
 	const activeDot = ((offset - total) % total + total) % total
 
@@ -83,7 +93,7 @@ function CardCarousel({ cards }) {
 
 			<div
 				className="hc-viewport"
-				ref={trackRef}
+				ref={viewportRef}
 				onPointerDown={onPointerDown}
 				onPointerMove={onPointerMove}
 				onPointerUp={onPointerUp}
