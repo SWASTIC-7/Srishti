@@ -101,16 +101,17 @@ function CardCarousel({ cards }) {
 					onTransitionEnd={handleTransitionEnd}
 				>
 					{cloned.map((card, i) => {
-						const realIndex = i % total
 						return (
 							<div key={i} className="hc-slide">
 								<div className="hc-card-wrap">
 									<div className="hc-card">
+										{/* top row: category left, name right */}
 										<div className="hc-card-top">
 											<span className="hc-category">{card.category}</span>
-											<span className="hc-index">{String(realIndex + 1).padStart(2, '0')}</span>
+											<h3 className="hc-name">{card.name}</h3>
 										</div>
 
+										{/* guy: absolutely pinned bottom-left */}
 										<div className="hc-art">
 											<img
 												src="./Vector.svg"
@@ -121,8 +122,8 @@ function CardCarousel({ cards }) {
 											/>
 										</div>
 
+										{/* bottom-right: button only */}
 										<div className="hc-card-bottom">
-											<h3 className="hc-name">{card.name}</h3>
 											<a
 												href={card.pdf}
 												target="_blank"

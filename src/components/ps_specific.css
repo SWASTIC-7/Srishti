@@ -116,37 +116,92 @@
 	gap: 18px;
 }
 
-/* ── Single problem card ── */
-.pss-card {
+/* ── Single problem card — outer wrapper (guy + card) ── */
+.pss-card-wrapper {
 	display: flex;
 	align-items: stretch;
-	border-radius: 18px;
+	gap: 0;
+	background: transparent;
+}
+
+/* ── Guy image on the left ── */
+.pss-card-guy {
+    width: 160px;
+    min-width: 160px;
+    align-self: stretch;  
+    height: 100%;         
+    min-height: 100%;       
+    object-fit: cover;
+    object-position: center top;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+    margin-right: 0;
+    filter: brightness(1.15);
+    display: block;
+}
+.pss-card-wrapper {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    background: #000000;  
+    overflow: hidden;     
+    border-radius: 0 14px 14px 0;
+}
+/* ── Single problem card ── */
+.pss-card {
+	flex: 1;
+	display: flex;
+	align-items: stretch;
+	border-radius: 0 14px 14px 0;
 	overflow: hidden;
-	border: 1px solid rgba(149, 115, 255, 0.35);
-	background: linear-gradient(120deg, rgba(14, 10, 28, 0.97) 0%, rgba(33, 15, 77, 0.88) 100%);
-	box-shadow: 0 8px 24px rgba(4, 3, 14, 0.5);
-	transition: border-color 0.25s, box-shadow 0.25s;
+	border: none;
+	min-height: 280px;
+	background: linear-gradient(to bottom, #3b1d8a 0%, #4e2aaa 35%, #6b3fd4 70%, #9d58f0 100%);
+	box-shadow: none;
+	transition: opacity 0.2s;
 }
 
 .pss-card:hover {
-	border-color: rgba(149, 115, 255, 0.7);
-	box-shadow: 0 12px 36px rgba(100, 60, 220, 0.28);
+	opacity: 0.92;
 }
 
 /* Right content column */
 .pss-card-body {
 	flex: 1;
-	padding: 20px 24px 20px 20px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	gap: 10px;
+	padding: 12px 28px 12px 28px;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	grid-template-rows: auto 1fr auto;
+	gap: 14px 12px;
+	align-items: start;
 }
 
+.pss-card-name {
+	grid-column: 1;
+	grid-row: 1;
+	font-family: "Tusker";
+	font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+	letter-spacing: 0.5px;
+	line-height: 1;
+	color: #ffffff;
+	margin: 0;
+	text-transform: uppercase;
+	text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+	align-self: end;
+	font-weight: 400;
+	padding-top: 24px;
+}
+
+/* ── FIX 1: category badge no longer flies above the card ── */
 .pss-card-meta {
+	grid-column: 2;
+	grid-row: 1;
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: flex-end;
+	padding-top: 0;
+	margin-top: 0;
 }
 
 .pss-card-category {
@@ -154,48 +209,50 @@
 	font-size: 0.78rem;
 	letter-spacing: 0.08em;
 	text-transform: uppercase;
-	color: #eee6ff;
-	border: 1px solid rgba(149, 115, 255, 0.5);
-	border-radius: 10px;
-	padding: 5px 14px;
-}
-
-.pss-card-name {
-	font-family: "Tusker";
-	font-size: clamp(1.1rem, 2vw, 1.5rem);
-	letter-spacing: 0.5px;
-	line-height: 1;
-	color: #f5f0ff;
-	margin: 0;
-	text-transform: uppercase;
+	color: #ffffff;
+	border: 1px solid #ffffff;
+	border-radius: 8px;
+	padding: 5px 16px;
+	background: transparent;
+	white-space: nowrap;
 }
 
 .pss-card-desc {
+	grid-column: 1 / -1;
+	grid-row: 2;
 	font-family: 'Kiona', sans-serif;
-	font-size: clamp(0.87rem, 1.05vw, 1rem);
+	font-size: clamp(1.25rem, 1.8vw, 1.5rem);
 	line-height: 1.6;
-	color: rgba(220, 210, 255, 0.72);
+	color: #ffffff;
 	margin: 0;
-	/* Clamp to 2 lines */
 	display: -webkit-box;
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
+	align-self: start;
 }
 
+/* ── FIX 2: buttons sit a consistent distance from the bottom ── */
 .pss-card-actions {
+	grid-column: 1 / -1;
+	grid-row: 3;
 	display: flex;
 	gap: 10px;
 	align-items: center;
+	justify-content: flex-end;
+	margin-top: 0;
+	align-self: end;
+	padding-bottom: 0;
+	margin-bottom: 0;
 }
 
 /* ── Buttons ── */
 .pss-btn {
-	border-radius: 999px;
+	border-radius: 8px;
 	font-family: "Tusker";
-	font-size: 0.62rem;
+	font-size: 0.85rem;
 	letter-spacing: 0.08em;
-	padding: 7px 18px;
+	padding: 10px 24px;
 	cursor: pointer;
 	border: none;
 	transition: opacity 0.2s, transform 0.15s;
@@ -207,14 +264,15 @@
 }
 
 .pss-btn-fill {
-	background: linear-gradient(104deg, #4c2aa0 0%, #7d57e4 72%, #e1cbff 130%);
-	color: #f5f0ff;
+	background: #231B39;
+	color: #ffffff;
+	border: none;
 }
 
 .pss-btn-outline {
-	background: transparent;
-	border: 1px solid rgba(149, 115, 255, 0.6);
-	color: #d4c4ff;
+	background: #231B39;
+	border: none;
+	color: #ffffff;
 	text-decoration: none;
 	display: inline-flex;
 	align-items: center;
@@ -235,56 +293,82 @@
 	padding: 0;
 	display: flex;
 	flex-direction: column;
-	gap: 14px;
+	gap: 0;
 }
 
 .pss-timeline-item {
 	display: flex;
-	align-items: center;
-	gap: 14px;
+	align-items: flex-start;
+	gap: 20px;
 	position: relative;
+	padding-bottom: 0;
+}
+
+.pss-timeline-item:last-child {
+	padding-bottom: 0;
+}
+
+/* dot + line column */
+.pss-timeline-dot-col {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-shrink: 0;
+	width: 18px;
+	align-self: stretch;
 }
 
 .pss-timeline-dot {
-	width: 8px;
-	height: 8px;
+	width: 16px;
+	height: 16px;
 	border-radius: 50%;
-	background: #7d57e4;
+	background: #231B39;
+	border: 2px solid #9b7aff;
 	flex-shrink: 0;
-	box-shadow: 0 0 8px rgba(125, 87, 228, 0.7);
 	position: relative;
 	z-index: 1;
+	margin-top: 4px;
 }
 
-/* vertical line dropping from each dot to the next */
-.pss-timeline-item:not(:last-child) .pss-timeline-dot::after {
-	content: '';
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	top: 8px;
+.pss-timeline-line {
 	width: 2px;
-	height: calc(14px + 8px); /* gap(14px) + dot height(8px) */
-	background: linear-gradient(to bottom, #7d57e4, rgba(125, 87, 228, 0.25));
+	flex: 1;
+	background: #5a3fa0;
+	margin-top: 4px;
+}
+
+.pss-timeline-item:last-child .pss-timeline-line {
+	display: none;
+}
+
+/* text column */
+.pss-timeline-text {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	padding-bottom: 28px;
+}
+
+.pss-timeline-item:last-child .pss-timeline-text {
+	padding-bottom: 0;
 }
 
 .pss-timeline-date {
-	font-family: "Tusker";
+	font-family: 'Kiona', sans-serif;
 	font-size: 0.85rem;
 	letter-spacing: 0.06em;
-	color: rgba(195, 175, 255, 0.7);
-	width: 48px;
-	flex-shrink: 0;
+	color: rgba(255, 255, 255, 0.55);
 	text-transform: uppercase;
 }
 
 .pss-timeline-label {
 	font-family: "Tusker";
-	font-size: 0.92rem;
+	font-size: 1.15rem;
 	letter-spacing: 0.04em;
-	color: #e8d8ff;
+	color: #ffffff;
 	text-transform: uppercase;
 	font-weight: 600;
+	line-height: 1.1;
 }
 
 /* ── Prizes ── */
@@ -301,22 +385,32 @@
 	display: flex;
 	align-items: center;
 	gap: 16px;
-	background: linear-gradient(105deg, rgba(33, 15, 77, 0.7) 0%, rgba(20, 10, 50, 0.85) 100%);
-	border: 1px solid rgba(149, 115, 255, 0.25);
+	background: #1a0d3d;
+	border: none;
 	border-radius: 12px;
 	padding: 14px 20px;
 }
 
-.pss-prize-medal {
-	font-size: 1.3rem;
+.pss-prize-rank {
+	font-family: "Tusker";
+	font-size: 0.85rem;
+	letter-spacing: 0.08em;
+	color: #ffffff;
 	flex-shrink: 0;
+	width: 48px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 8px;
+	background: linear-gradient(135deg, #c084fc 0%, #a855f7 25%, #6b3fd4 60%, #3b1d8a 100%);
 }
 
 .pss-prize-points {
 	font-family: 'Kiona', sans-serif;
-	font-size: 1rem;
+	font-size: 1.3rem;
 	letter-spacing: 0.1em;
-	color: #e8d8ff;
+	color: #ffffff;
 	text-transform: uppercase;
 	font-weight: 600;
 }
@@ -340,12 +434,17 @@
 		bottom: 20px;
 	}
 
-	.pss-card {
-		padding: 0;
+	.pss-card-wrapper {
+		gap: 0;
+	}
+
+	.pss-card-guy {
+		width: 110px;
+		min-width: 110px;
 	}
 
 	.pss-card-body {
-		padding: 16px;
+		padding: 14px 16px;
 	}
 
 	.pss-card-meta {

@@ -2,6 +2,7 @@ import Navbar from './navbar'
 import Footer from './footer'
 import SplashCursor from './splash_cursor'
 import './ps_specific.css'
+import guyImg from '../assets/guy.png'
 
 // ─── Glob imports (same pattern as ProblemStatement.jsx) ───────────────────
 const gifImageMap = import.meta.glob('../assets/gif*.gif', {
@@ -56,11 +57,11 @@ const tierData = [
 			},
 		],
 		timeline: [
-			{ date: 'Mar 25', label: 'Registration Opens' },
-			{ date: 'Apr 01', label: 'Problem Statements Released' },
-			{ date: 'Apr 15', label: 'Midpoint Check-In' },
-			{ date: 'May 05', label: 'Final Submission' },
-			{ date: 'May 10', label: 'Results Announced' },
+			{ date: 'Mar 25', label: 'Register' },
+			{ date: 'Apr 01', label: 'Register' },
+			{ date: 'Apr 15', label: 'Register' },
+			{ date: 'May 05', label: 'Register' },
+			{ date: 'May 10', label: 'Register' },
 		],
 		prizes: [
 			{ rank: '1st', points: 600 },
@@ -108,11 +109,11 @@ const tierData = [
 			},
 		],
 		timeline: [
-			{ date: 'Apr 10', label: 'Registration Opens' },
-			{ date: 'Apr 15', label: 'Problem Statements Released' },
-			{ date: 'Apr 22', label: 'Midpoint Check-In' },
-			{ date: 'Apr 29', label: 'Final Submission' },
-			{ date: 'May 03', label: 'Results Announced' },
+			{ date: 'Apr 10', label: 'Register' },
+			{ date: 'Apr 15', label: 'Register' },
+			{ date: 'Apr 22', label: 'Register' },
+			{ date: 'Apr 29', label: 'Register' },
+			{ date: 'May 03', label: 'Register' },
 		],
 		prizes: [
 			{ rank: '1st', points: 500 },
@@ -152,11 +153,11 @@ const tierData = [
 			},
 		],
 		timeline: [
-			{ date: 'Apr 01', label: 'Registration Opens' },
-			{ date: 'Apr 05', label: 'Problem Statements Released' },
-			{ date: 'Apr 19', label: 'Midpoint Check-In' },
-			{ date: 'Apr 26', label: 'Final Submission' },
-			{ date: 'Apr 30', label: 'Results Announced' },
+			{ date: 'Apr 01', label: 'Register' },
+			{ date: 'Apr 05', label: 'Register' },
+			{ date: 'Apr 19', label: 'Register' },
+			{ date: 'Apr 26', label: 'Register' },
+			{ date: 'Apr 30', label: 'Register' },
 		],
 		prizes: [
 			{ rank: '1st', points: 400 },
@@ -188,10 +189,10 @@ const tierData = [
 			},
 		],
 		timeline: [
-			{ date: 'May 08', label: 'Registration Opens' },
-			{ date: 'May 10', label: 'Problem Statements Released' },
-			{ date: 'May 10', label: 'Final Submission (Same Day)' },
-			{ date: 'May 11', label: 'Results Announced' },
+			{ date: 'May 08', label: 'Register' },
+			{ date: 'May 10', label: 'Register' },
+			{ date: 'May 10', label: 'Register' },
+			{ date: 'May 11', label: 'Register' },
 		],
 		prizes: [
 			{ rank: '1st', points: 300 },
@@ -205,20 +206,25 @@ const tierData = [
 
 function ProblemCard({ problem }) {
 	return (
-		<div className="pss-card">
-			<div className="pss-card-body">
-				<div className="pss-card-meta">
-					<span className="pss-card-category">{problem.category}</span>
-				</div>
-				<h3 className="pss-card-name">{problem.name}</h3>
-				<p className="pss-card-desc">{problem.description}</p>
-				<div className="pss-card-actions">
-					<a href={problem.pdfUrl} className="pss-btn pss-btn-outline" target="_blank" rel="noreferrer">
-						View PDF ↗
-					</a>
-					<button type="button" className="pss-btn pss-btn-fill">
-						Register
-					</button>
+		<div className="pss-card-wrapper">
+			{/* Guy image sits outside/left of the card */}
+			<img src={guyImg} alt="Tech GC participant" className="pss-card-guy" />
+
+			<div className="pss-card">
+				<div className="pss-card-body">
+					<div className="pss-card-meta">
+						<span className="pss-card-category">{problem.category}</span>
+					</div>
+					<h3 className="pss-card-name">{problem.name}</h3>
+					<p className="pss-card-desc">{problem.description}</p>
+					<div className="pss-card-actions">
+						<a href={problem.pdfUrl} className="pss-btn pss-btn-outline" target="_blank" rel="noreferrer">
+							View PDF ↗
+						</a>
+						<button type="button" className="pss-btn pss-btn-fill">
+							Register
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -232,9 +238,14 @@ function TimelineSection({ items }) {
 			<ul className="pss-timeline-list">
 				{items.map((item, i) => (
 					<li className="pss-timeline-item" key={i}>
-						<span className="pss-timeline-date">{item.date}</span>
-						<span className="pss-timeline-dot" />
-						<span className="pss-timeline-label">{item.label}</span>
+						<div className="pss-timeline-dot-col">
+							<span className="pss-timeline-dot" />
+							<span className="pss-timeline-line" />
+						</div>
+						<div className="pss-timeline-text">
+							<span className="pss-timeline-date">{item.date}</span>
+							<span className="pss-timeline-label">{item.label}</span>
+						</div>
 					</li>
 				))}
 			</ul>
@@ -243,14 +254,14 @@ function TimelineSection({ items }) {
 }
 
 function PrizesSection({ prizes }) {
-	const medals = ['🥇', '🥈', '🥉']
+	const ranks = ['1ST', '2ND', '3RD']
 	return (
 		<div className="pss-prizes">
 			<h2 className="pss-section-title">PRIZES</h2>
 			<ul className="pss-prizes-list">
 				{prizes.map((prize, i) => (
 					<li className="pss-prize-item" key={i}>
-						<span className="pss-prize-medal">{medals[i]}</span>
+						<span className="pss-prize-rank">{ranks[i]}</span>
 						<span className="pss-prize-points">{prize.points} POINTS</span>
 					</li>
 				))}

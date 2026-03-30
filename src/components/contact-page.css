@@ -8,18 +8,18 @@
 
 /* ---------- hero / title ---------- */
 .contact-hero {
-  padding: 64px 0 48px;
+  padding: 48px 0 36px;
   text-align: center;
 }
 
 .contact-title {
-  font-weight: 400; /* force lighter rendering */
-  transform: scaleY(0.9); /* slightly compress thickness */
+  font-weight: 400;
+  transform: scaleY(0.9);
   font-family: "Tusker";
-  font-size: 7rem;
+  font-size: 5rem;
   letter-spacing: 8px;
 
-  background: linear-gradient(90deg, #231B39 0%, #5C34D7 35%, #FDF 85%);
+  background: linear-gradient(90deg, #FDF 0%, #5C34D7 55%, #231B39 100%);
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -37,7 +37,7 @@
 .contact-card {
   border: 1px solid transparent;
   border-radius: 16px;
-  padding: 40px 44px;
+  padding: 32px 36px;
 
   display: flex;
   align-items: flex-start;
@@ -45,11 +45,11 @@
 
   background:
     linear-gradient(#000, #000) padding-box,
-    linear-gradient(45deg, #ff00cc, #8a2be2, #5c34d7) border-box;
+    linear-gradient(45deg, rgba(200, 160, 255, 0.65), rgba(138, 43, 226, 0.55), rgba(92, 52, 215, 0.2)) border-box;
 
   box-shadow:
-    0 0 40px rgba(92, 52, 215, 0.25),
-    0 0 80px rgba(255, 221, 255, 0.15);
+    0 0 28px rgba(92, 52, 215, 0.2),
+    0 0 56px rgba(255, 221, 255, 0.1);
 }
 
 /* ---------- left column ---------- */
@@ -60,23 +60,22 @@
 
 .get-in-touch {
   font-family: 'Kiona', sans-serif;
-  font-size: clamp(1.7rem, 2.2vw, 1.9rem);
+  font-size: clamp(1.3rem, 1.8vw, 1.5rem);
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.9);
-  margin: 0 0 28px;
+  margin: 0 0 22px;
 }
 
 /* ---------- contact list ---------- */
 .contact-list {
   list-style: none;
-  font-size: 2rem;
   margin: 0;
   padding: 0;
 
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 18px;
 }
 
 .contact-item {
@@ -86,7 +85,7 @@
 .contact-link {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
 
   text-decoration: none;
   color: inherit;
@@ -99,9 +98,9 @@
 
 /* icon bubble */
 .contact-icon {
-  width: 44px;
-  height: 44px;
-  min-width: 44px;
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
 
   border-radius: 10px;
   background: linear-gradient(135deg, #6d28d9 0%, #5b21b6 100%);
@@ -114,8 +113,8 @@
 }
 
 .contact-icon svg {
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
 }
 
 /* text beside icon */
@@ -127,7 +126,7 @@
 
 .contact-label {
   font-family: 'Kiona', sans-serif;
-  font-size: 1.1rem;
+  font-size: 0.72rem;
   opacity: 0.7;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -137,7 +136,7 @@
 
 .contact-value {
   font-family: 'Kiona', sans-serif;
-  font-size: 1.5rem;
+  font-size: 0.95rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -153,7 +152,7 @@
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.08);
 
-  align-self: stretch; /* fill card height */
+  align-self: stretch;
   display: flex;
 }
 
@@ -168,8 +167,8 @@
 @media (max-width: 700px) {
   .contact-card {
     flex-direction: column;
-    padding: 28px 24px;
-    gap: 28px;
+    padding: 24px 20px;
+    gap: 24px;
   }
 
   .contact-map {
@@ -178,6 +177,6 @@
   }
 
   .contact-hero {
-    padding: 44px 0 32px;
+    padding: 36px 0 24px;
   }
 }
