@@ -15,6 +15,7 @@ import anshImg from '../assets/ansh.jpg';
 import aviralImg from '../assets/aviral.jpg';
 import rajarshiImg from '../assets/rajarshi.jpg';
 import kaushalendraImg from '../assets/kaushalendra.jpg';
+import atirishiImg from '../assets/atirishi.jpg';
 
 
 // ─── Team data ─────────────────────────────────────────────────────────────
@@ -78,7 +79,7 @@ const teamMembers = [
 	{
 		id: 'tm-10',
 		name: 'Rajarshi Verma',
-		phone: '+91 9519288965',
+		phone: '+91 95192 88965',
 		photo: rajarshiImg,
 	},
 	{
@@ -87,6 +88,12 @@ const teamMembers = [
 		phone: '+91 87647 10030',
 		photo: kaushalendraImg,
 	},
+	{
+		id: 'tm-12',
+		name: 'Atirishi Jha',
+		phone: '+91 89610 84770',
+		photo: atirishiImg,
+	}
 ]
 
 // ─── Single card ───────────────────────────────────────────────────────────
