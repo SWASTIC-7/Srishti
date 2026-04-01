@@ -221,7 +221,7 @@
 	grid-column: 1 / -1;
 	grid-row: 2;
 	font-family: 'Kiona', sans-serif;
-	font-size: clamp(1.25rem, 1.8vw, 1.5rem);
+	font-size: clamp(0rem, 1.1vw, 1.5rem);
 	line-height: 1.6;
 	color: #ffffff;
 	margin: 0;

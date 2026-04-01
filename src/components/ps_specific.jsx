@@ -25,12 +25,12 @@ const tierData = [
 		problems: [
 			{
 				id: 'hp-1',
-				name: 'PROBLEM NAME',
-				category: 'Category',
-				description:
-					'High Prep PS events are the pinnacle of Tech GC — demanding months of preparation, deep domain expertise, and seamless cross-disciplinary collaboration.',
-				pdfUrl: '#',
+				name: 'Moulded Agents',
+				category: 'AI/ML',
+				description:'Design an AI-powered multi-agent system that automates end-to-end conference planning, from sponsor and speaker discovery to venue selection, pricing, and promotion.',
+				pdfUrl: '/highprepPS1.pdf',
 			},
+			/*
 			{
 				id: 'hp-2',
 				name: 'PROBLEM NAME',
@@ -54,7 +54,7 @@ const tierData = [
 				description:
 					'High Prep PS events are the pinnacle of Tech GC — demanding months of preparation, deep domain expertise, and seamless cross-disciplinary collaboration.',
 				pdfUrl: '#',
-			},
+			},*/
 		],
 		timeline: [
 			{ date: 'Mar 25', label: 'Register' },

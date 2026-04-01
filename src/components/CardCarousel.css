@@ -141,11 +141,14 @@
 	letter-spacing: 0.5px;
 	text-transform: uppercase;
 	color: #fff;
-	text-align: left;
+	text-align: right;
 	max-width: 60%;
 	margin: 0;
 }
 
+.hc-desc{
+	text-align: right;
+}
 /* ── View PDF button: slightly curved, right-aligned ── */
 .hc-btn {
 	display: inline-block;
@@ -210,6 +213,7 @@
 	transition: background 0.22s ease, width 0.22s ease, transform 0.22s ease;
 }
 
+
 .hc-dot-active {
 	background: #a57fff;
 	width: 22px;
@@ -220,8 +224,8 @@
 /* ── responsive ── */
 @media (max-width: 768px) {
 	.hc-root {
-		padding: 20px 10px 16px;
-		gap: 8px;
+		gap: 1.5px;
+		padding: 18px 3px 15px;
 	}
 
 	.hc-slide {
@@ -252,5 +256,17 @@
 	.hc-btn {
 		font-size: 0.58rem;
 		padding: 7px 14px;
+	}
+}
+@media (max-width: 400px) {
+	.hc-root {
+		gap: 1.5px;
+		padding: 18px 3px 15px;
+	}
+
+	.hc-arrow {
+		width: 20px;
+		min-width: 20px;
+		font-size: 2rem;
 	}
 }

@@ -280,3 +280,9 @@
 	}
 
 }
+
+@media (max-width: 400px){
+	.problem-tier-top {
+		height: 100px;
+	}
+}

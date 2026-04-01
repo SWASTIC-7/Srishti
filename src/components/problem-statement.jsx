@@ -3,6 +3,7 @@ import Navbar from './navbar'
 import Footer from './footer'
 import SplashCursor from '../components/splash_cursor'
 import CardCarousel from './CardCarousel'
+/*...  */
 import './ProblemStatement.css'
 
 const gifImageMap = import.meta.glob('../assets/gif*.gif', {
@@ -16,9 +17,9 @@ const prepTiers = [
 		edition: 'Edition 1',
 		info: 'The problem statement drops in early April, with a 2-5 week window for complex problem solving.',
 		cards: [
-			{ name: 'PROBLEM NAME', category: 'Category', pdf: '#' },
-			{ name: 'PROBLEM NAME', category: 'Category', pdf: '#' },
-			{ name: 'PROBLEM NAME', category: 'Category', pdf: '#' },
+			{ name: 'Moulded Agents', category: 'AI/ML', pdf: '/highprepPS1.pdf', psNumber : '1' },
+			/*{ name: 'PROBLEM NAME', category: 'Category', pdf: '#',psNumber: },
+			{ name: 'PROBLEM NAME', category: 'Category', pdf: '#' ,psNumber: },*/
 		],
 	},
 	{
@@ -100,6 +101,7 @@ function ProblemStatement() {
 							</div>
 
 							<p className="problem-tier-info">{tier.info}</p>
+							
 
 							<div className="problem-tier-cards-strip">
 								<CardCarousel cards={tier.cards} />
