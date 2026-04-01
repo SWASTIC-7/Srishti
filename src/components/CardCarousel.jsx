@@ -119,8 +119,10 @@ function CardCarousel({ cards }) {
 										<div className="hc-card-top">
 											<span className="hc-category">{card.category}</span>
 											<h3 className="hc-name">{card.name}</h3>
-										</div>
+											
 
+											<h4 className='hc-desc'>{card.psNumber}</h4>
+										</div>
 										{/* guy: absolutely pinned bottom-left */}
 										<div className="hc-art">
 											<img
@@ -139,10 +141,11 @@ function CardCarousel({ cards }) {
 												target="_blank"
 												rel="noreferrer"
 												className="hc-btn"
+												onPointerDown={e => e.stopPropagation()}  // ← add this
 												onClick={e => e.stopPropagation()}
-											>
-												View PDF &rsaquo;
-											</a>
+												>
+												View PDF ›
+												</a>
 										</div>
 									</div>
 								</div>
