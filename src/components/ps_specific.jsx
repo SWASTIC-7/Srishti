@@ -36,7 +36,7 @@ const tierData = [
 				name: 'QUANTITY',
 				category: 'FINANCE',
 				description:
-					'Design and implement an end-to-end quantitative trading system that generates risk-adjusted returns by integrating data processing, signal generation, portfolio optimisation, risk management, and execution under real-world market constraints.',
+					'Build a robust end-to-end quantitative trading system that generates risk-adjusted returns under real-world market constraints.',
 				pdfUrl: '/highprepPS2.pdf',
 			},
 			/*
