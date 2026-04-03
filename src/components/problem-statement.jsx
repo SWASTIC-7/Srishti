@@ -18,7 +18,7 @@ const prepTiers = [
 		info: 'The problem statement drops in early April, with a 2-5 week window for complex problem solving.',
 		cards: [
 			{ name: 'Moulded Agents', category: 'AI/ML', pdf: '/highprepPS1.pdf', psNumber : '1' },
-			{ name: 'Quantity', category: 'Finance', pdf: '/highprepPS2.pdf',psNumber:'2' },
+			{ name: 'Quantify', category: 'Quant', pdf: '/highprepPS2.pdf',psNumber:'2' },
 			{ name: 'Unclothe My Location', category: 'AI/ML', pdf: '/highprepPS3.pdf' ,psNumber:'3' },
 		],
 	},
