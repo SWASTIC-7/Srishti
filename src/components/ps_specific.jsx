@@ -14,6 +14,7 @@ function getGif(index) {
 	return gifImageMap[`../assets/gif${index + 1}.gif`] ?? ''
 }
 
+const googleForm = 'https://forms.gle/6XupBmaTK3eJAX8C6'
 // ─── Static tier data ──────────────────────────────────────────────────────
 // Replace placeholder strings with real content when finalized
 const tierData = [
@@ -222,9 +223,10 @@ function ProblemCard({ problem }) {
 						<a href={problem.pdfUrl} className="pss-btn pss-btn-outline" target="_blank" rel="noreferrer">
 							View PDF ↗
 						</a>
-						<button type="button" className="pss-btn pss-btn-fill">
+						<a href={googleForm} className="pss-btn pss-btn-outline" target="_blank" rel="noreferrer">
 							Register
-						</button>
+						</a>
+
 					</div>
 				</div>
 			</div>
