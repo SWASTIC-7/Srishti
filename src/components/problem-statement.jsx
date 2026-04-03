@@ -19,7 +19,7 @@ const prepTiers = [
 		cards: [
 			{ name: 'Moulded Agents', category: 'AI/ML', pdf: '/highprepPS1.pdf', psNumber : '1' },
 			{ name: 'Quantity', category: 'Finance', pdf: '/highprepPS2.pdf',psNumber:'2' },
-			/*{ name: 'PROBLEM NAME', category: 'Category', pdf: '#' ,psNumber: },*/
+			{ name: 'Unclothe My Location', category: 'AI/ML', pdf: '/highprepPS3.pdf' ,psNumber:'3' },
 		],
 	},
 	{

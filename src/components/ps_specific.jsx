@@ -34,21 +34,22 @@ const tierData = [
 			
 			{
 				id: 'hp-2',
-				name: 'QUANTITY',
-				category: 'FINANCE',
+				name: 'QUANTIFY',
+				category: 'QUANT',
 				description:
 					'Build a robust end-to-end quantitative trading system that generates risk-adjusted returns under real-world market constraints.',
 				pdfUrl: '/highprepPS2.pdf',
 			},
-			/*
+			
 			{
 				id: 'hp-3',
-				name: 'PROBLEM NAME',
-				category: 'Category',
+				name: 'UNCLOTHE MY LOCATION',
+				category: 'AI/ML',
 				description:
-					'High Prep PS events are the pinnacle of Tech GC — demanding months of preparation, deep domain expertise, and seamless cross-disciplinary collaboration.',
-				pdfUrl: '#',
+					'Design an AI-driven system to detect GNSS spoofing by analyzing signal patterns, temporal inconsistencies, and anomalies to ensure reliable navigation and timing systems',
+				pdfUrl: '/highprepPS3.pdf',
 			},
+			/*
 			{
 				id: 'hp-4',
 				name: 'PROBLEM NAME',
@@ -191,8 +192,8 @@ const tierData = [
 			},
 		],
 		timeline: [
-			{ date: 'May 08', label: 'Register' },
-			{ date: 'May 10', label: 'Register' },
+			{ date: 'May 08', label: 'Registeration Open' },
+			{ date: 'May 10', label: 'Registeration Open' },
 			{ date: 'May 10', label: 'Register' },
 			{ date: 'May 11', label: 'Register' },
 		],
