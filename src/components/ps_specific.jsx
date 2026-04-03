@@ -30,15 +30,16 @@ const tierData = [
 				description:'Design an AI-powered multi-agent system that automates end-to-end conference planning, from sponsor and speaker discovery to venue selection, pricing, and promotion.',
 				pdfUrl: '/highprepPS1.pdf',
 			},
-			/*
+			
 			{
 				id: 'hp-2',
-				name: 'PROBLEM NAME',
-				category: 'Category',
+				name: 'QUANTITY',
+				category: 'FINANCE',
 				description:
-					'High Prep PS events are the pinnacle of Tech GC — demanding months of preparation, deep domain expertise, and seamless cross-disciplinary collaboration.',
-				pdfUrl: '#',
+					'Design and implement an end-to-end quantitative trading system that generates risk-adjusted returns by integrating data processing, signal generation, portfolio optimisation, risk management, and execution under real-world market constraints.',
+				pdfUrl: '/highprepPS2.pdf',
 			},
+			/*
 			{
 				id: 'hp-3',
 				name: 'PROBLEM NAME',
