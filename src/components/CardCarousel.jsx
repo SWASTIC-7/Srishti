@@ -141,7 +141,7 @@ function CardCarousel({ cards }) {
 												target="_blank"
 												rel="noreferrer"
 												className="hc-btn"
-												onPointerDown={e => e.stopPropagation()}  // ← add this
+												onPointerDown={e => e.stopPropagation()}  
 												onClick={e => e.stopPropagation()}
 												>
 												View PDF ›

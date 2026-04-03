@@ -14,6 +14,7 @@ function getGif(index) {
 	return gifImageMap[`../assets/gif${index + 1}.gif`] ?? ''
 }
 
+const googleForm = 'https://forms.gle/6XupBmaTK3eJAX8C6'
 // ─── Static tier data ──────────────────────────────────────────────────────
 // Replace placeholder strings with real content when finalized
 const tierData = [
@@ -30,15 +31,16 @@ const tierData = [
 				description:'Design an AI-powered multi-agent system that automates end-to-end conference planning, from sponsor and speaker discovery to venue selection, pricing, and promotion.',
 				pdfUrl: '/highprepPS1.pdf',
 			},
-			/*
+			
 			{
 				id: 'hp-2',
-				name: 'PROBLEM NAME',
-				category: 'Category',
+				name: 'QUANTITY',
+				category: 'FINANCE',
 				description:
-					'High Prep PS events are the pinnacle of Tech GC — demanding months of preparation, deep domain expertise, and seamless cross-disciplinary collaboration.',
-				pdfUrl: '#',
+					'Build a robust end-to-end quantitative trading system that generates risk-adjusted returns under real-world market constraints.',
+				pdfUrl: '/highprepPS2.pdf',
 			},
+			/*
 			{
 				id: 'hp-3',
 				name: 'PROBLEM NAME',
@@ -221,9 +223,10 @@ function ProblemCard({ problem }) {
 						<a href={problem.pdfUrl} className="pss-btn pss-btn-outline" target="_blank" rel="noreferrer">
 							View PDF ↗
 						</a>
-						<button type="button" className="pss-btn pss-btn-fill">
+						<a href={googleForm} className="pss-btn pss-btn-outline" target="_blank" rel="noreferrer">
 							Register
-						</button>
+						</a>
+
 					</div>
 				</div>
 			</div>
