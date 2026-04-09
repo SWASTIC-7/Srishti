@@ -176,7 +176,7 @@
 	top: 16px;
 	font-family: 'Tusker', sans-serif;
 	font-size: clamp(1.1rem, 1.6vw, 1.8rem);
-	line-height: 0.88;
+	line-height: 1.4;
 	letter-spacing: 0.4px;
 	text-align: right;
 	text-transform: uppercase;

@@ -63,12 +63,12 @@ const teamMembers = [
 		photo: aniketImg,
 	},
 
-	{
+	/*{
 		id: 'tm-8',
 		name:'Ansh Bhardwaj',
 		phone: '+91 82877 67318',
 		photo: anshImg,
-	},
+	},*/
 	{
 		id: 'tm-9',
 		name:'Aviral Vishwakarma',

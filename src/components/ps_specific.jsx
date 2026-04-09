@@ -60,11 +60,13 @@ const tierData = [
 			},*/
 		],
 		timeline: [
-			{ date: 'Mar 25', label: 'Register' },
-			{ date: 'Apr 01', label: 'Register' },
-			{ date: 'Apr 15', label: 'Register' },
-			{ date: 'May 05', label: 'Register' },
-			{ date: 'May 10', label: 'Register' },
+			{ date: 'Apr 02', label: 'PS release' },
+			{ date: 'Apr 03', label: 'Registeration Begins' },
+			{ date: 'April 05', label: 'Registeration Closes' },
+			{ date: 'April 15', label: 'Submission Starts' },
+			{ date: 'April 17', label: 'Submission Ends' },
+			{ date: 'April 19', label: 'Valedictory Ceremony' },
+
 		],
 		prizes: [
 			{ rank: '1st', points: 600 },
@@ -80,21 +82,21 @@ const tierData = [
 		problems: [
 			{
 				id: 'mp-1',
-				name: 'PROBLEM NAME',
-				category: 'Category',
+				name: 'MINDCASE',
+				category: 'VIBECODING & DATA',
 				description:
-					'Mid Prep PS events challenge teams with moderately complex problem statements that require focused effort and sharp technical execution.',
-				pdfUrl: '#',
+					'Scrape any public web data and build a useful, creative application with it.',
+				pdfUrl: '/midprepPS1.pdf',
 			},
 			{
 				id: 'mp-2',
-				name: 'PROBLEM NAME',
-				category: 'Category',
+				name: 'PANCAKE',
+				category: 'BLOCKCHAIN',
 				description:
-					'Mid Prep PS events challenge teams with moderately complex problem statements that require focused effort and sharp technical execution.',
-				pdfUrl: '#',
+					'Build a multi-agent AI system that autonomously trades on PancakeSwap by analyzing markets, generating strategies, executing trades, and managing risk.',
+					pdfUrl: '/midprepPS2.pdf',
 			},
-			{
+			/*{
 				id: 'mp-3',
 				name: 'PROBLEM NAME',
 				category: 'Category',
@@ -109,14 +111,15 @@ const tierData = [
 				description:
 					'Mid Prep PS events challenge teams with moderately complex problem statements that require focused effort and sharp technical execution.',
 				pdfUrl: '#',
-			},
+			},*/
 		],
 		timeline: [
-			{ date: 'Apr 10', label: 'Register' },
-			{ date: 'Apr 15', label: 'Register' },
-			{ date: 'Apr 22', label: 'Register' },
-			{ date: 'Apr 29', label: 'Register' },
-			{ date: 'May 03', label: 'Register' },
+			{ date: 'Apr 09', label: 'PS release' },
+			{ date: 'Apr 10', label: 'Registeration Begins' },
+			{ date: 'Apr 12', label: 'Registeration Ends' },
+			{ date: 'Apr 15', label: 'Submission Begins' },
+			{ date: 'April 17', label: 'Submission Ends' },
+			{ date: 'April 19', label: 'Valedictory Ceremony' },
 		],
 		prizes: [
 			{ rank: '1st', points: 500 },
@@ -135,7 +138,7 @@ const tierData = [
 				name: 'PROBLEM NAME',
 				category: 'Category',
 				description:
-					'Low Prep PS events are designed for teams who thrive under tighter timelines, rewarding agility, creativity, and solid fundamentals.',
+					'Lw Prep PS events are designed for teams who thrive under tighter timelines, rewarding agility, creativity, and solid fundamentals.',
 				pdfUrl: '#',
 			},
 			{

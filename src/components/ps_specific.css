@@ -176,24 +176,22 @@
 	gap: 14px 12px;
 	align-items: start;
 }
-
 .pss-card-name {
-	grid-column: 1;
-	grid-row: 1;
-	font-family: "Tusker";
-	font-size: clamp(1.8rem, 3.2vw, 2.4rem);
-	letter-spacing: 0.5px;
-	line-height: 1;
-	color: #ffffff;
-	margin: 0;
-	text-transform: uppercase;
-	text-shadow: 0 2px 12px rgba(0,0,0,0.3);
-	align-self: end;
-	font-weight: 400;
-	padding-top: 24px;
+    grid-column: 1;
+    grid-row: 1;
+    font-family: "Tusker";
+    font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+    letter-spacing: 0.5px;
+    line-height: 1.4;       
+    color: #ffffff;
+    margin: 0;
+    text-transform: uppercase;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    align-self: start;      
+    font-weight: 400;
+    padding-top: 8px;       
 }
 
-/* ── FIX 1: category badge no longer flies above the card ── */
 .pss-card-meta {
 	grid-column: 2;
 	grid-row: 1;
