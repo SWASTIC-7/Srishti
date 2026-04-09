@@ -23,7 +23,6 @@ function Navbar() {
         <li><a href="/#home" className="active">HOME</a></li>
         <li><a href="/problems">PROBLEM STATEMENT</a></li>
         <li><a href="/leaderboard">LEADERBOARD</a></li>
-        <li><a href="#">HACKATHON</a></li>
         <li className="nav-more" ref={dropdownRef}>
           <button
             className={`nav-more-btn${moreOpen ? " open" : ""}`}

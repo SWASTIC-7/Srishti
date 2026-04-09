@@ -27,8 +27,8 @@ const prepTiers = [
 		edition: 'Edition 2',
 		info: 'The problem statement drops in mid-April, with a 2-week window for medium-level challenges.',
 		cards: [
-			{ name: 'PROBLEM NAME', category: 'Category', pdf: '#' },
-			{ name: 'PROBLEM NAME', category: 'Category', pdf: '#' },
+			{ name: 'MINDCASE', category: 'VIBECODING & DATA', pdf: '/midprepPS1.pdf', psNumber : '1'  },
+			{ name: 'PANCAKE', category: 'BLOCKCHAIN', pdf: '/midprepPS2.pdf',psNumber:'2' },
 		],
 	},
 	{
