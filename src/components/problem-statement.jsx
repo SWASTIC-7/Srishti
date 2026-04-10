@@ -29,6 +29,8 @@ const prepTiers = [
 		cards: [
 			{ name: 'MINDCASE', category: 'VIBECODING & DATA', pdf: '/midprepPS1.pdf', psNumber : '1'  },
 			{ name: 'PANCAKE', category: 'BLOCKCHAIN', pdf: '/midprepPS2.pdf',psNumber:'2' },
+			{ name: 'LEAN LAUNCH', category: 'CONSULTING', pdf: '/midprepPS3.pdf',psNumber:'3' },
+			{ name: 'CampusIQ', category: 'DATA ANALYSIS', pdf: '/midprepPS4.pdf',psNumber:'4' },
 		],
 	},
 	{

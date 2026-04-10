@@ -96,22 +96,22 @@ const tierData = [
 					'Build a multi-agent AI system that autonomously trades on PancakeSwap by analyzing markets, generating strategies, executing trades, and managing risk.',
 					pdfUrl: '/midprepPS2.pdf',
 			},
-			/*{
+			{
 				id: 'mp-3',
-				name: 'PROBLEM NAME',
-				category: 'Category',
+				name: 'LEAN LAUNCH',
+				category: 'CONSULTING',
 				description:
-					'Mid Prep PS events challenge teams with moderately complex problem statements that require focused effort and sharp technical execution.',
-				pdfUrl: '#',
+					'Building a capital-efficient growth engine to acquire and sustain 100,000 US users in a saturated market.',
+					pdfUrl: '/midprepPS3.pdf',
 			},
 			{
 				id: 'mp-4',
-				name: 'PROBLEM NAME',
-				category: 'Category',
+				name: 'CampusIQ',
+				category: 'Data Analysis',
 				description:
-					'Mid Prep PS events challenge teams with moderately complex problem statements that require focused effort and sharp technical execution.',
-				pdfUrl: '#',
-			},*/
+					'Develop an end-to-end data-driven platform that transforms raw campus data into insights, predictions, and actionable recommendations.',
+					pdfUrl: '/midprepPS4.pdf',
+			},
 		],
 		timeline: [
 			{ date: 'Apr 09', label: 'PS release' },
