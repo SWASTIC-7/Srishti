@@ -28,9 +28,9 @@ const prepTiers = [
 		info: 'The problem statement drops in mid-April, with a 2-week window for medium-level challenges.',
 		cards: [
 			{ name: 'MINDCASE', category: 'VIBECODING & DATA', pdf: '/midprepPS1.pdf', psNumber : '1'  },
-			{ name: 'PANCAKE', category: 'BLOCKCHAIN', pdf: '/midprepPS2.pdf',psNumber:'2' },
-			{ name: 'LEAN LAUNCH', category: 'CONSULTING', pdf: '/midprepPS3.pdf',psNumber:'3' },
-			{ name: 'CampusIQ', category: 'DATA ANALYSIS', pdf: '/midprepPS4.pdf',psNumber:'4' },
+			{ name: 'PancakeSwap', category: 'BLOCKCHAIN', pdf: '/midprepPS2.pdf',psNumber:'2' },
+			{ name: 'MATIKS', category: 'CONSULTING', pdf: '/midprepPS3.pdf',psNumber:'3' },
+			{ name: 'NoQS Digital', category: 'DATA ANALYSIS', pdf: '/midprepPS4.pdf',psNumber:'4' },
 		],
 	},
 	{
