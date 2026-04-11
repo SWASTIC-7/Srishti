@@ -90,7 +90,7 @@ const tierData = [
 			},
 			{
 				id: 'mp-2',
-				name: 'PANCAKE',
+				name: 'PancakeSwap',
 				category: 'BLOCKCHAIN',
 				description:
 					'Build a multi-agent AI system that autonomously trades on PancakeSwap by analyzing markets, generating strategies, executing trades, and managing risk.',
@@ -98,7 +98,7 @@ const tierData = [
 			},
 			{
 				id: 'mp-3',
-				name: 'LEAN LAUNCH',
+				name: 'MATIKS',
 				category: 'CONSULTING',
 				description:
 					'Building a capital-efficient growth engine to acquire and sustain 100,000 US users in a saturated market.',
@@ -106,7 +106,7 @@ const tierData = [
 			},
 			{
 				id: 'mp-4',
-				name: 'CampusIQ',
+				name: 'NoQS DIGITAL',
 				category: 'Data Analysis',
 				description:
 					'Develop an end-to-end data-driven platform that transforms raw campus data into insights, predictions, and actionable recommendations.',
