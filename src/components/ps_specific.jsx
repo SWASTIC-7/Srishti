@@ -14,13 +14,13 @@ function getGif(index) {
 	return gifImageMap[`../assets/gif${index + 1}.gif`] ?? ''
 }
 
-const googleForm = 'https://forms.gle/6XupBmaTK3eJAX8C6'
 // ─── Static tier data ──────────────────────────────────────────────────────
 // Replace placeholder strings with real content when finalized
 const tierData = [
 	{
 		index: 0,
 		title: 'HIGH PREP',
+		registerUrl: 'https://forms.gle/6XupBmaTK3eJAX8C6',
 		overview:
 			'High Prep PS events are the pinnacle of Tech GC — demanding months of preparation, deep domain expertise, and seamless cross-disciplinary collaboration. Teams must build complete end-to-end systems judged on innovation, technical depth, and real-world impact.',
 		problems: [
@@ -77,6 +77,7 @@ const tierData = [
 	{
 		index: 1,
 		title: 'MID PREP',
+		registerUrl: 'https://docs.google.com/forms/d/1e_X8O0U-NrcHTnZp5Nlbow6Zmy1SGgS95u70DSaSlII/edit',
 		overview:
 			'Mid Prep events challenge teams with moderately complex problem statements released in mid-April. A 2-week window demands focused effort, strong planning, and crisp technical execution across domains.',
 		problems: [
@@ -130,6 +131,7 @@ const tierData = [
 	{
 		index: 2,
 		title: 'LOW PREP',
+		registerUrl: '#',
 		overview:
 			'Low Prep events are designed for teams who thrive under tighter timelines. Problem statements drop in early April with a 2.5–3 week window, rewarding agility, creativity, and solid fundamentals.',
 		problems: [
@@ -174,6 +176,7 @@ const tierData = [
 	{
 		index: 3,
 		title: 'NO-PREP',
+		registerUrl: '#',
 		overview:
 			'No-Prep is the ultimate test of raw ability — problem statements drop near the end of the competition with only a 3–5 hour window. No prior research, no planning, just skill, speed, and instinct.',
 		problems: [
@@ -210,7 +213,7 @@ const tierData = [
 
 // ─── Sub-components ────────────────────────────────────────────────────────
 
-function ProblemCard({ problem }) {
+function ProblemCard({ problem, registerUrl }) {
 	return (
 		<div className="pss-card-wrapper">
 			{/* Guy image sits outside/left of the card */}
@@ -227,10 +230,9 @@ function ProblemCard({ problem }) {
 						<a href={problem.pdfUrl} className="pss-btn pss-btn-outline" target="_blank" rel="noreferrer">
 							View PDF ↗
 						</a>
-						<a href={googleForm} className="pss-btn pss-btn-outline" target="_blank" rel="noreferrer">
+						<a href={registerUrl} className="pss-btn pss-btn-outline" target="_blank" rel="noreferrer">
 							Register
 						</a>
-
 					</div>
 				</div>
 			</div>
@@ -318,7 +320,7 @@ function ProblemStatementSpecific({ tierIndex = 0 }) {
 					<h2 className="pss-section-title">PROBLEM STATEMENTS</h2>
 					<div className="pss-cards-list">
 						{tier.problems.map((problem) => (
-							<ProblemCard key={problem.id} problem={problem} />
+							<ProblemCard key={problem.id} problem={problem} registerUrl={tier.registerUrl} />
 						))}
 					</div>
 				</section>
