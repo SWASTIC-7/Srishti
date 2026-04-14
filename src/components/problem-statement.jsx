@@ -38,10 +38,10 @@ const prepTiers = [
 		edition: 'Edition 3',
 		info: 'The problem statement drops in early April, with a 2.5-3 week window for complex problem solving.',
 		cards: [
-			{ name: 'PROBLEM NAME', category: 'Category', pdf: '#' },
-			{ name: 'PROBLEM NAME', category: 'Category', pdf: '#' },
-			{ name: 'PROBLEM NAME', category: 'Category', pdf: '#' },
-			{ name: 'PROBLEM NAME', category: 'Category', pdf: '#' },
+			{ name: 'COOX', category: 'PRODUCT MANAGEMENT', pdf: '/lowprepPS1.pdf' },
+			{ name: 'DS', category: 'PRODUCT DESIGN', pdf: '/lowprepPS2.pdf' },
+			{ name: 'DIVAINE', category: 'STRATEGY AND GROWTH', pdf: '/lowprepPS3.pdf' },
+			
 		],
 	},
 	{
