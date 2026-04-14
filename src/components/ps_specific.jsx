@@ -145,7 +145,7 @@ const tierData = [
 			},
 			{
 				id: 'lp-2',
-				name: 'DS',
+				name: 'PRODUCT DESIGN',
 				category: 'PRODUCT DESIGN',
 				description:
 					'Design a thoughtful digital solution for hostel students that subtly supports mental well-being, reduces isolation, and encourages healthier routines without creating screen dependency or replacing real human connection.',
