@@ -137,27 +137,27 @@ const tierData = [
 		problems: [
 			{
 				id: 'lp-1',
-				name: 'PROBLEM NAME',
-				category: 'Category',
+				name: 'COOX',
+				category: 'TECHNICAL PRODUCT MANAGEMENT',
 				description:
-					'Lw Prep PS events are designed for teams who thrive under tighter timelines, rewarding agility, creativity, and solid fundamentals.',
-				pdfUrl: '#',
+					'Analyze real booking data to identify non-serviceable hotspot areas, map them using geo-clustering, extract affected pin codes, and propose a geoblocking strategy to reduce cancellations and revenue loss.',
+					pdfUrl: '/lowprepPS1',
 			},
 			{
 				id: 'lp-2',
-				name: 'PROBLEM NAME',
-				category: 'Category',
+				name: 'PRODUCT DESIGN',
+				category: 'PRODUCT DESIGN',
 				description:
-					'Low Prep PS events are designed for teams who thrive under tighter timelines, rewarding agility, creativity, and solid fundamentals.',
-				pdfUrl: '#',
+					'Design a thoughtful digital solution for hostel students that subtly supports mental well-being, reduces isolation, and encourages healthier routines without creating screen dependency or replacing real human connection.',
+					pdfUrl: '/lowprepPS2',
 			},
 			{
 				id: 'lp-3',
-				name: 'PROBLEM NAME',
-				category: 'Category',
+				name: 'DIVAINE',
+				category: 'STRATEGY AND GROWTH',
 				description:
-					'Low Prep PS events are designed for teams who thrive under tighter timelines, rewarding agility, creativity, and solid fundamentals.',
-				pdfUrl: '#',
+					'Build a market-entry strategy for divAIne’s human-aware AI layer by identifying the most valuable sectors, high-impact use cases, and best commercialization path (B2B/B2B2C/B2C) for scalable growth and measurable business value',
+					pdfUrl: '/lowprepPS3',
 			},
 		],
 		timeline: [
