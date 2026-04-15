@@ -16,7 +16,7 @@ import aviralImg from '../assets/aviral.jpg';
 import rajarshiImg from '../assets/rajarshi.jpg';
 import kaushalendraImg from '../assets/kaushalendra.jpg';
 import atirishiImg from '../assets/atirishi.jpg';
-import gauravImg from '../assets/atirishi.jpg';
+import gauravImg from '../assets/gaurav.jpeg';
 
 
 // ─── Team data ─────────────────────────────────────────────────────────────
