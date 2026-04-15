@@ -141,7 +141,7 @@ const tierData = [
 				category: 'TECHNICAL PRODUCT MANAGEMENT',
 				description:
 					'Analyze real booking data to identify non-serviceable hotspot areas, map them using geo-clustering, extract affected pin codes, and propose a geoblocking strategy to reduce cancellations and revenue loss.',
-					pdfUrl: '/lowprepPS1',
+					pdfUrl: '/lowprepPS1.pdf',
 			},
 			{
 				id: 'lp-2',
@@ -149,7 +149,7 @@ const tierData = [
 				category: 'PRODUCT DESIGN',
 				description:
 					'Design a thoughtful digital solution for hostel students that subtly supports mental well-being, reduces isolation, and encourages healthier routines without creating screen dependency or replacing real human connection.',
-					pdfUrl: '/lowprepPS2',
+					pdfUrl: '/lowprepPS2.pdf',
 			},
 			{
 				id: 'lp-3',
@@ -157,7 +157,15 @@ const tierData = [
 				category: 'STRATEGY AND GROWTH',
 				description:
 					'Build a market-entry strategy for divAIne’s human-aware AI layer by identifying the most valuable sectors, high-impact use cases, and best commercialization path (B2B/B2B2C/B2C) for scalable growth and measurable business value',
-					pdfUrl: '/lowprepPS3',
+					pdfUrl: '/lowprepPS3.pdf',
+			},
+			{
+				id: 'lp-4',
+				name: 'ATHIRA',
+				category: 'DEVELOPMENT',
+				description:
+					'Design a real-time, collaborative learning workspace that transforms a generic video call into an interactive, high-signal tutoring experience',
+					pdfUrl: '/lowprepPS4.pdf',
 			},
 		],
 		timeline: [
@@ -176,25 +184,17 @@ const tierData = [
 	{
 		index: 3,
 		title: 'NO-PREP',
-		registerUrl: '#',
+		registerUrl: 'https://www.matiks.in/league/69db9065191c5780f79f8573',
 		overview:
 			'No-Prep is the ultimate test of raw ability — problem statements drop near the end of the competition with only a 3–5 hour window. No prior research, no planning, just skill, speed, and instinct.',
 		problems: [
 			{
 				id: 'np-1',
-				name: 'PROBLEM NAME',
-				category: 'Category',
+				name: 'MATICS LEAGUE',
+				category: 'MATHS',
 				description:
 					'No-Prep PS events drop with only hours on the clock. Teams must rely entirely on raw skill, fast thinking, and instinctive problem-solving.',
-				pdfUrl: '#',
-			},
-			{
-				id: 'np-2',
-				name: 'PROBLEM NAME',
-				category: 'Category',
-				description:
-					'No-Prep PS events drop with only hours on the clock. Teams must rely entirely on raw skill, fast thinking, and instinctive problem-solving.',
-				pdfUrl: '#',
+				pdfUrl: '/noprepPS1.pdf',
 			},
 		],
 		timeline: [

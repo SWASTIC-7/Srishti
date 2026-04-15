@@ -38,9 +38,10 @@ const prepTiers = [
 		edition: 'Edition 3',
 		info: 'The problem statement drops in early April, with a 2.5-3 week window for complex problem solving.',
 		cards: [
-			{ name: 'COOX', category: 'PRODUCT MANAGEMENT', pdf: '/lowprepPS1.pdf' },
-			{ name: 'PRODUCT DESIGN', category: 'PRODUCT DESIGN', pdf: '/lowprepPS2.pdf' },
-			{ name: 'DIVAINE', category: 'STRATEGY AND GROWTH', pdf: '/lowprepPS3.pdf' },
+			{ name: 'COOX', category: 'PRODUCT MANAGEMENT', pdf: '/lowprepPS1.pdf',psNumber:'1' },
+			{ name: 'PRODUCT DESIGN', category: 'PRODUCT DESIGN', pdf: '/lowprepPS2.pdf',psNumber:'2'  },
+			{ name: 'DIVAINE', category: 'STRATEGY AND GROWTH', pdf: '/lowprepPS3.pdf',psNumber:'3'  },
+			{ name: 'ATHIRA', category: 'DEVELOPMENT', pdf: '/lowprepPS4.pdf',psNumber:'4'  },
 			
 		],
 	},
@@ -49,8 +50,7 @@ const prepTiers = [
 		edition: 'Edition 4',
 		info: 'The problem statement drops near the end of competition, with a 3-5 hour window for rapid problem solving.',
 		cards: [
-			{ name: 'PROBLEM NAME', category: 'Category', pdf: '#' },
-			{ name: 'PROBLEM NAME', category: 'Category', pdf: '#' },
+			{ name: 'MATIKS LEAGUE', category: 'MATHS', pdf: '/noprepPS1.pdf',psNumber:'*'  },
 		],
 	},
 ]
