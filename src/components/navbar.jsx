@@ -21,6 +21,7 @@ function Navbar() {
       <img src="/logo.svg" alt="Srishti Logo" />
       <ul className="nav-links">
         <li><a href="/#home" className="active">HOME</a></li>
+        <li><Link to="/hackathon">HACKATHON</Link></li>
         <li><a href="/problems">PROBLEM STATEMENT</a></li>
         <li><a href="/leaderboard">LEADERBOARD</a></li>
         <li className="nav-more" ref={dropdownRef}>
