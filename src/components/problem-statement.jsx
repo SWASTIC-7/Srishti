@@ -51,6 +51,7 @@ const prepTiers = [
 		info: 'The problem statement drops near the end of competition, with a 3-5 hour window for rapid problem solving.',
 		cards: [
 			{ name: 'MATIKS LEAGUE', category: 'MATHS', pdf: '/noprepPS1.pdf',psNumber:'*'  },
+			{ name: 'STACK UP', category: 'AGENTIC', pdf: '/noprepPS2.pdf',psNumber:'*'  },
 		],
 	},
 ]
