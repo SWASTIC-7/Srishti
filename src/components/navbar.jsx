@@ -74,6 +74,28 @@ function Navbar() {
                   TEAM
                 </Link>
               </li>
+              <li role="none">
+                <Link
+                  to="/clubs"
+                  className="nav-dropdown-item"
+                  role="menuitem"
+                  onClick={() => { setMoreOpen(false); setTimeout(() => window.scrollTo(0, 0), 0); }}
+                >
+                  <span className="nav-dropdown-icon">◈</span>
+                  CLUBS
+                </Link>
+              </li>
+              <li role="none">
+                <Link
+                  to="/partners"
+                  className="nav-dropdown-item"
+                  role="menuitem"
+                  onClick={() => { setMoreOpen(false); setTimeout(() => window.scrollTo(0, 0), 0); }}
+                >
+                  <span className="nav-dropdown-icon">◈</span>
+                  PARTNERS
+                </Link>
+              </li>
             </ul>
           )}
         </li>

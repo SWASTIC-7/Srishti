@@ -1,0 +1,122 @@
+.clb26-page {
+  width: min(1240px, 95vw);
+  margin: 22px auto 72px;
+}
+
+.clb26-board {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: clamp(26px, 4vw, 46px) clamp(16px, 2.6vw, 30px) 28px;
+  /* border: 1px solid rgba(255, 255, 255, 0.14);
+  background:
+    radial-gradient(circle at 50% 100%, rgba(70, 40, 180, 0.42), transparent 32%),
+    radial-gradient(circle at 12% 8%, rgba(255, 255, 255, 0.08), transparent 24%),
+    radial-gradient(circle at 88% 8%, rgba(255, 255, 255, 0.08), transparent 24%),
+    linear-gradient(180deg, #07080d 0%, #09050f 100%); */
+}
+
+.clb26-glow {
+  position: absolute;
+  top: 50%;
+  width: 88px;
+  height: 88px;
+  transform: translateY(-50%);
+  border-radius: 20px;
+  border: 1px solid rgba(170, 124, 255, 0.75);
+  box-shadow: 0 0 18px rgba(132, 82, 250, 0.8), inset 0 0 10px rgba(168, 137, 255, 0.45);
+  background: radial-gradient(circle at 50% 50%, rgba(186, 161, 255, 0.35), rgba(36, 24, 72, 0.66));
+}
+
+.clb26-glow-left {
+  left: -44px;
+}
+
+.clb26-glow-right {
+  right: -44px;
+}
+
+.clb26-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.clb26-title {
+  font-family: 'Tusker', sans-serif;
+  font-size: clamp(2.4rem, 5.6vw, 4.2rem);
+  letter-spacing: 2px;
+  line-height: 0.95;
+  text-align: center;
+  color: #fefefe;
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.35);
+}
+
+.clb26-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(10px, 1.7vw, 16px);
+}
+
+.clb26-card {
+  min-height: clamp(64px, 9vw, 90px);
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
+  border: 2px solid rgba(197, 158, 255, 0.92);
+  box-shadow:
+    0 0 0 1px rgba(125, 81, 232, 0.72),
+    0 0 14px rgba(120, 75, 230, 0.4);
+}
+
+.clb26-logo {
+  width: 100%;
+  max-width: 124px;
+  max-height: 58px;
+  object-fit: contain;
+}
+
+.clb26-footer-note {
+  margin-top: 18px;
+  text-align: center;
+  font-family: 'Tusker', sans-serif;
+  letter-spacing: 1.4px;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 0 10px rgba(178, 145, 255, 0.45);
+}
+
+@media (max-width: 1060px) {
+  .clb26-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 780px) {
+  .clb26-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .clb26-glow {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .clb26-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .clb26-card {
+    min-height: 74px;
+  }
+
+  .clb26-footer-note {
+    font-size: 1.1rem;
+  }
+}

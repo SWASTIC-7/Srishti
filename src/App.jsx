@@ -6,6 +6,8 @@ import ProblemStatement from './components/problem-statement'
 import ProblemStatementSpecific from './components/ps_specific'
 import Team from './components/team'
 import HackathonPage from './components/hackathon-page'
+import ClubsPage from './components/clubs-page'
+import PartnersPage from './components/partners-page'
 
 
 function ProblemStatementSpecificWrapper() {
@@ -23,6 +25,8 @@ function App() {
         <Route path="/problems" element={<ProblemStatement />} />
         <Route path="/problems/:tierIndex" element={<ProblemStatementSpecificWrapper />} />
         <Route path="/hackathon" element={<HackathonPage />} />
+        <Route path="/clubs" element={<ClubsPage />} />
+        <Route path="/partners" element={<PartnersPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
         <Route path="/team" element={<Team />} />
       </Routes>

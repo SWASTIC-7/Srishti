@@ -1,0 +1,92 @@
+.ptr26-page {
+  width: min(1240px, 95vw);
+  margin: 22px auto 72px;
+}
+
+.ptr26-board {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: clamp(26px, 4vw, 46px) clamp(16px, 2.6vw, 30px) 28px;
+}
+
+.ptr26-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.ptr26-title {
+  font-family: 'Tusker', sans-serif;
+  font-size: clamp(2.4rem, 5.6vw, 4.2rem);
+  letter-spacing: 2px;
+  line-height: 0.95;
+  text-align: center;
+  color: #fefefe;
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.35);
+}
+
+.ptr26-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(10px, 1.7vw, 16px);
+}
+
+.ptr26-card {
+  min-height: clamp(64px, 9vw, 92px);
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
+  border: 2px solid rgba(197, 158, 255, 0.92);
+  box-shadow:
+    0 0 0 1px rgba(125, 81, 232, 0.72),
+    0 0 14px rgba(120, 75, 230, 0.4);
+}
+
+.ptr26-logo {
+  width: 100%;
+  max-width: 140px;
+  max-height: 62px;
+  object-fit: contain;
+}
+
+.ptr26-footer-note {
+  margin-top: 18px;
+  text-align: center;
+  font-family: 'Tusker', sans-serif;
+  letter-spacing: 1.4px;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 0 10px rgba(178, 145, 255, 0.45);
+}
+
+@media (max-width: 980px) {
+  .ptr26-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .ptr26-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .ptr26-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ptr26-card {
+    min-height: 78px;
+  }
+
+  .ptr26-footer-note {
+    font-size: 1.1rem;
+  }
+}
