@@ -123,7 +123,7 @@ export default function HackathonPage() {
             >
               Register Now
             </a>
-            <a className="hk26-cta hk26-cta-outline" href="#hk26-problem-statement">
+            <a className="hk26-cta hk26-cta-outline" href="https://srishti.iitr.ac.in/noprepPS2.pdf" target="_blank" rel="noreferrer">
               View Problem Statement
             </a>
           </div>
