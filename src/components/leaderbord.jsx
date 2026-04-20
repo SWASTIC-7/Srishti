@@ -9,18 +9,71 @@ const leaderboardByTrack = {
 		{ score: 1880, club: 'KASTURBA BHAWAN', rank: 3 },
 		{ score: 1360, club: 'HIMALAYA BHAWAN', rank: 4 },
 		{ score: 1200, club: 'RADHAKRISHNAN BHAWAN', rank: 5 },
-		{ score: 875,  club: 'RAVINDRA BHAWAN', rank: 6 },
-		{ score: 760, club: 'VIGYAN KUNJ BHAWAN', rank: 7 },
-		{ score: 600, club: 'RAJENDRA BHAWAN', rank: 8 },
+		{ score: 1000, club: 'RAJENDRA BHAWAN', rank: 6 },
+		{ score: 875,  club: 'RAVINDRA BHAWAN', rank: 7 },
+		{ score: 760, club: 'VIGYAN KUNJ BHAWAN', rank: 8 },
 		{ score: 275, club: 'GOVING BHAWAN', rank: 9 },
 		{ score: 225, club: 'RAJEEV BHAWAN', rank: 10 },
 		{ score: 75, club: 'CAUTLEY BHAWAN', rank: 11 },
 		{ score: 60, club: 'SAROJINI BHAWAN', rank: 12 },
 	],
-	HighPrep: [],
-	MidPrep: [],
-	LowPrep: [],
-	NoPrep: [],
+	HighPrep: [
+		{ score: 1750, club: 'VIVEKANAND BHAWAN', rank: 1 },
+		{ score: 1400, club: 'JAWAHAR BHAWAN', rank: 2 },
+		{ score: 900, club: 'KASTURBA BHAWAN', rank: 3 },
+		{ score: 600, club: 'RAJENDRA BHAWAN', rank: 4 },
+		{ score: 550, club: 'RADHAKRISHNAN BHAWAN', rank: 5 },
+		{ score: 500, club: 'HIMALAYA BHAWAN', rank: 6 },
+		{ score: 300, club: 'VIGYAN KUNJ BHAWAN', rank: 7 },
+		{ score: 200, club: 'GOVING BHAWAN', rank: 8 },
+		{ score: 100, club: 'RAJEEV BHAWAN', rank: 9 },
+
+		{ score: 0,  club: 'RAVINDRA BHAWAN', rank: 10 },
+		
+		{ score: 0, club: 'CAUTLEY BHAWAN', rank: 10 },
+		{ score: 0, club: 'SAROJINI BHAWAN', rank: 10 },
+	],
+	MidPrep: [
+		{ score: 765, club: 'KASTURBA BHAWAN', rank: 1 },
+		{ score: 745, club: 'VIVEKANAND BHAWAN', rank: 2 },
+		{ score: 700, club: 'JAWAHAR BHAWAN', rank: 3 },
+		{ score: 645,  club: 'RAVINDRA BHAWAN', rank: 4 },
+		{ score: 430, club: 'HIMALAYA BHAWAN', rank: 5 },
+		{ score: 400, club: 'RAJENDRA BHAWAN', rank: 6 },
+		{ score: 400, club: 'VIGYAN KUNJ BHAWAN', rank: 6 },
+		{ score: 250, club: 'RADHAKRISHNAN BHAWAN', rank: 7 },
+		{ score: 120, club: 'RAJEEV BHAWAN', rank: 8 },
+		{ score: 60, club: 'SAROJINI BHAWAN', rank: 9 },
+		{ score: 0, club: 'GOVING BHAWAN', rank: 10 },
+		{ score: 0, club: 'CAUTLEY BHAWAN', rank: 10 },
+		
+	],
+	LowPrep: [
+		{ score: 430, club: 'HIMALAYA BHAWAN', rank: 1 },
+		{ score: 400, club: 'RADHAKRISHNAN BHAWAN', rank: 2 },
+		{ score: 385, club: 'JAWAHAR BHAWAN', rank: 3 },
+		{ score: 230,  club: 'RAVINDRA BHAWAN', rank: 4 },
+		{ score: 215, club: 'KASTURBA BHAWAN', rank: 5 },
+		{ score: 75, club: 'CAUTLEY BHAWAN', rank: 6 },
+		{ score: 75, club: 'GOVING BHAWAN', rank: 6 },
+		
+		
+		{ score: 60, club: 'VIVEKANAND BHAWAN', rank: 7 },
+		{ score: 60, club: 'VIGYAN KUNJ BHAWAN', rank: 8 },
+		
+		{ score: 0, club: 'RAJENDRA BHAWAN', rank: 9 },
+		
+		
+		{ score: 0, club: 'RAJEEV BHAWAN', rank: 10 },
+		{ score: 0, club: 'SAROJINI BHAWAN', rank: 11 },
+		
+		
+	],
+	NoPrep: [
+		{ score: 0, club: 'BURI BURI ZIAMON', rank: 1 },
+		{ score: 0, club: 'BUILDER WAVE', rank: 2 },
+		{ score: 5, club: 'PEANUT BUTTER', rank: 3 },
+	],
 }
 
 function rankLabel(rank) {
