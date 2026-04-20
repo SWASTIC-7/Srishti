@@ -72,7 +72,7 @@ const leaderboardByTrack = {
 	NoPrep: [
 		{ score: 0, club: 'BURI BURI ZIAMON', rank: 1 },
 		{ score: 0, club: 'BUILDER WAVE', rank: 2 },
-		{ score: 5, club: 'PEANUT BUTTER', rank: 3 },
+		{ score: 0, club: 'PEANUT BUTTER', rank: 3 },
 	],
 }
 
